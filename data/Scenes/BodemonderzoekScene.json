@@ -1,0 +1,153 @@
+{
+    "meshes": [],
+    "scene": {
+        "children": [
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.866025388240814,
+                            0.500000059604645
+                        ],
+                        "rotation": [
+                            0.420735508203506,
+                            -0.229848861694336,
+                            -0.420735508203506,
+                            0.770151138305664
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "baking": "realtime",
+                        "color": [
+                            0.866025388240814,
+                            0.866025388240814,
+                            0.747120082378387,
+                            0.866025388240814
+                        ],
+                        "cutoff": 0.0,
+                        "directionalAmbient": 0.5,
+                        "intensity": 1,
+                        "lighttype": "directional",
+                        "range": 3,
+                        "shadow": "shadowmap",
+                        "spotlightAngle": 45,
+                        "type": "light"
+                    }
+                ],
+                "name": "Sunlight",
+                "uuid": "0015d2bc-9f60-4ed4-b3d9-27c63f3b0532"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "type": "camera",
+                        "useFbo": false
+                    },
+                    {
+                        "light": "",
+                        "timeOfDay": 14,
+                        "type": "dynamicskybox"
+                    }
+                ],
+                "name": "Camera",
+                "uuid": "b9970846-6884-4191-b428-8226648c7482"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            17,
+                            0.0,
+                            2.20776700973511
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.258819043636322,
+                            0.0,
+                            0.965925812721252
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/buildings/firestation/groundFloor_v1.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "groundFloor_v1.fbx",
+                "uuid": "569a25eb-1e0e-479a-9997-5b8b3b64ce72"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -1.6964498758316,
+                            0.0,
+                            1.80832576751709
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            50,
+                            1,
+                            50
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/floortiles.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "floortiles.fbx",
+                "uuid": "01f18464-5bf1-405e-ab49-8c9cb05243bf"
+            }
+        ],
+        "name": "Root",
+        "uuid": "dcb18079-2f3e-4162-ae8e-022b0224b4fa"
+    }
+}
