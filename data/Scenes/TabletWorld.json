@@ -1,0 +1,254 @@
+{
+    "meshes": [
+        {
+            "id": "90b73cd6-5c8c-42c6-b45c-eaef6103feab",
+            "indices": [
+                0,
+                1,
+                2,
+                0,
+                2,
+                3
+            ],
+            "material": {
+                "color": {
+                    "ambient": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "diffuse": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "shinyness": 0.0,
+                    "specular": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "diffuse": "data/tienedit/textures/stub.png"
+            },
+            "vertices": [
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        -0.5,
+                        0.0,
+                        -0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        0.0,
+                        0.0
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        -0.5,
+                        0.0,
+                        0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        0.0,
+                        1
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        0.5,
+                        0.0,
+                        0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        0.5,
+                        0.0,
+                        -0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        1,
+                        0.0
+                    ]
+                }
+            ]
+        }
+    ],
+    "scene": {
+        "children": [
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.866025388240814,
+                            0.500000059604645
+                        ],
+                        "rotation": [
+                            0.420735508203506,
+                            -0.229848861694336,
+                            -0.420735508203506,
+                            0.770151138305664
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "baking": "realtime",
+                        "color": [
+                            0.866025388240814,
+                            0.866025388240814,
+                            0.747120082378387,
+                            0.866025388240814
+                        ],
+                        "cutoff": 0.0,
+                        "directionalAmbient": 0.5,
+                        "intensity": 1,
+                        "lighttype": "directional",
+                        "range": 3,
+                        "shadow": "shadowmap",
+                        "spotlightAngle": 45,
+                        "type": "light"
+                    }
+                ],
+                "name": "Sunlight",
+                "uuid": "6fa3c2f3-af6e-4937-95b4-b8ea4880098c"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "type": "camera",
+                        "useFbo": false
+                    },
+                    {
+                        "light": "6fa3c2f3-af6e-4937-95b4-b8ea4880098c",
+                        "timeOfDay": 14,
+                        "type": "dynamicskybox"
+                    }
+                ],
+                "name": "Camera",
+                "uuid": "9bb70865-7ba5-4503-a989-5757c0c66f0b"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            5.14750003814697,
+                            5.14750003814697,
+                            5.14750003814697
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "mesh": "90b73cd6-5c8c-42c6-b45c-eaef6103feab",
+                        "type": "meshrenderer"
+                    }
+                ],
+                "name": "plane",
+                "uuid": "22c58347-aa30-4a9f-bded-d7b5ce312b64"
+            }
+        ],
+        "name": "Root",
+        "uuid": "5d9f4ad0-99f9-4236-9609-9176fa42f20d"
+    }
+}
