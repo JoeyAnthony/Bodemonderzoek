@@ -7,6 +7,8 @@
 #include <VrLib\HtcVive.h>
 #include <VrLib\Device.h>
 #include <glm\glm.hpp>
+#include <string>
+#include "NodeLoader.h"
 
 class Bodemonderzoek : public vrlib::Application{
 	vrlib::Vive vive;
@@ -24,6 +26,8 @@ public:
 	virtual void latePreFrame() override;
 
 	void loadScene();
+	NodeLoader* searchNode(std::string searchTerm);
 private:
 	bool showDebug;
+	std::vector<NodeLoader> nodes;
 };
