@@ -1,0 +1,359 @@
+{
+    "meshes": [],
+    "scene": {
+        "children": [
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.866025388240814,
+                            0.500000059604645
+                        ],
+                        "rotation": [
+                            0.420735508203506,
+                            -0.229848861694336,
+                            -0.420735508203506,
+                            0.770151138305664
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "baking": "realtime",
+                        "color": [
+                            0.866025388240814,
+                            0.866025388240814,
+                            0.747120082378387,
+                            0.866025388240814
+                        ],
+                        "cutoff": 0.0,
+                        "directionalAmbient": 0.5,
+                        "intensity": 1,
+                        "lighttype": "directional",
+                        "range": 3,
+                        "shadow": "shadowmap",
+                        "spotlightAngle": 45,
+                        "type": "light"
+                    }
+                ],
+                "name": "Sunlight",
+                "uuid": "67405a58-079a-49a8-a2e3-5e5cce9aeacf"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "type": "camera",
+                        "useFbo": false
+                    },
+                    {
+                        "light": "",
+                        "timeOfDay": 14,
+                        "type": "dynamicskybox"
+                    }
+                ],
+                "name": "Camera",
+                "uuid": "b809e937-b31e-4566-a1c6-38bea6a4f29d"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -2.14032459259033,
+                            -1.19209289550781e-07,
+                            -2.39871740341187
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrel/barrelMetal_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal_L.fbx",
+                "uuid": "e43cc120-2a0f-4105-8ea1-90b942cf1084"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -2.67707800865173,
+                            1.19209289550781e-07,
+                            2.58818578720093
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/oilstain/oilStain.fbx",
+                        "materialoverrides": [
+                            {
+                                "texture": "./data/Bodemonderzoek/models/oilstain/oil_S.png"
+                            }
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "oilStain.fbx",
+                "uuid": "60809b78-6ccc-4298-9375-00c82efde972"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            25,
+                            2,
+                            2.55716848373413
+                        ],
+                        "rotation": [
+                            0.984807729721069,
+                            7.43509147582699e-08,
+                            0.173648193478584,
+                            -1.31100730271783e-08
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/buildings/firestation/groundFloor_v1.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "groundFloor_v1.fbx",
+                "uuid": "7aa5ef7d-90f1-4664-a6d4-2358da3fe45d"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            50,
+                            1,
+                            50
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/floortiles.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "floortiles.fbx",
+                "uuid": "93d94cfc-41c7-4880-b985-2c2929495676"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            50,
+                            0.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            52,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/wall.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "wall.fbx",
+                "uuid": "48bc0f53-fd5b-4dbf-b102-e391e480c4bd"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -50,
+                            0.0,
+                            0.0
+                        ],
+                        "rotation": [
+                            -9.53529195157898e-07,
+                            0.70698469877243,
+                            9.53858489083359e-07,
+                            0.70722883939743
+                        ],
+                        "scale": [
+                            52,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/wall.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "wall.fbx",
+                "uuid": "13f398fb-3fa4-4526-b6a1-44dc92356fd4"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.0,
+                            50
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            52,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/wall.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "wall.fbx",
+                "uuid": "686408a9-339d-4797-bd0c-9a54d28d03dd"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            0.0,
+                            -50
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            52,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/wall.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "wall.fbx",
+                "uuid": "bd402511-3ae3-47cb-a62c-dd54fe91bb6e"
+            }
+        ],
+        "name": "Root",
+        "uuid": "2fdc8c25-aac5-4ef7-9a1b-301bba21a1b5"
+    }
+}

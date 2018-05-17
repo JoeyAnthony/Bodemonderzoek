@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Turnable">
+      <UniqueIdentifier>{63b063f1-9866-46b7-940c-ff01fc3d7865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Turnable">
+      <UniqueIdentifier>{55c3fc29-b48c-49af-87f6-d2b8ebd58690}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h">
@@ -27,8 +33,17 @@
     <ClInclude Include="Uniforms.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MainShader.h">
+    <ClInclude Include="NodeLoader.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Turnable.h">
+      <Filter>Header Files\Turnable</Filter>
+    </ClInclude>
+    <ClInclude Include="Door.h">
+      <Filter>Header Files\Turnable</Filter>
+    </ClInclude>
+    <ClInclude Include="Manhole.h">
+      <Filter>Header Files\Turnable</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -41,8 +56,17 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MainShader.cpp">
+    <ClCompile Include="NodeLoader.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Door.cpp">
+      <Filter>Source Files\Turnable</Filter>
+    </ClCompile>
+    <ClCompile Include="Turnable.cpp">
+      <Filter>Source Files\Turnable</Filter>
+    </ClCompile>
+    <ClCompile Include="Manhole.cpp">
+      <Filter>Source Files\Turnable</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
