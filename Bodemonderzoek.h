@@ -34,6 +34,7 @@ public:
 private:
 	bool showDebug;
 	std::vector<NodeLoader> nodes;
-	Turnable * door;
+	Turnable * doorLeft;
+	Turnable * doorRight;
 	Turnable * manhole;
 };

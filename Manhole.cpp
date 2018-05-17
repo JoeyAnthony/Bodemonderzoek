@@ -14,9 +14,9 @@ Manhole::~Manhole()
 
 void Manhole::Open()
 {
-	object->rotation.x -= 0.01;
+	object->rotation.x -= step;
 	object->rotation.w = cos(object->rotation.x);
-	if (object->rotation.x <= -0.7) {
+	if (object->rotation.x <= -radiant) {
 		isOpen = true;
 	}
 
@@ -24,7 +24,7 @@ void Manhole::Open()
 
 void Manhole::Close()
 {
-	object->rotation.x += 0.01;
+	object->rotation.x += step;
 	object->rotation.w = cos(object->rotation.x);
 	if (object->rotation.x >= 0.0) {
 		isOpen = false;
