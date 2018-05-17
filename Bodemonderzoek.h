@@ -12,11 +12,13 @@
 #include "Turnable.h"
 #include "Door.h"
 #include "Manhole.h"
+#include "MainShader.h"
 
 using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
 	vrlib::Vive vive;
 	vrlib::tien::Tien Engine;
+	MainShader mainShader;
 
 public:
 	Bodemonderzoek();

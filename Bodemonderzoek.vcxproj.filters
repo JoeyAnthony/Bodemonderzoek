@@ -45,6 +45,9 @@
     <ClInclude Include="Manhole.h">
       <Filter>Header Files\Turnable</Filter>
     </ClInclude>
+    <ClInclude Include="MainShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -67,6 +70,9 @@
     </ClCompile>
     <ClCompile Include="Manhole.cpp">
       <Filter>Source Files\Turnable</Filter>
+    </ClCompile>
+    <ClCompile Include="MainShader.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@
 int main(int argc, char* argv[])
 {
 	vrlib::Kernel* kernel = vrlib::Kernel::getInstance();  // Get the kernel
-	Bodemonderzoek* application = NULL;
+	Bodemonderzoek* application = nullptr;
 
 	// Load any config files specified on the command line
 	for (int i = 1; i < argc; ++i)
