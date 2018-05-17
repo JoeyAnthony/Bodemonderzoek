@@ -9,6 +9,7 @@ NodeLoader::NodeLoader(std::string path, std::string name, double x, double y, d
 
 	position = glm::vec3(x,y,z);
 	rotation = glm::quat(0,0,0,0);
+	scale = glm::vec3(1,1,1);
 }
 
 
