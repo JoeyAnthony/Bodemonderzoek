@@ -7,7 +7,7 @@
                     {
                         "position": [
                             0.0,
-                            0.866025388240814,
+                            2,
                             0.500000059604645
                         ],
                         "rotation": [
@@ -116,51 +116,15 @@
                 "components": [
                     {
                         "position": [
-                            -2.67707800865173,
-                            1.19209289550781e-07,
-                            2.58818578720093
+                            10,
+                            0.0,
+                            -10
                         ],
                         "rotation": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            1
-                        ],
-                        "scale": [
-                            1,
-                            1,
-                            1
-                        ],
-                        "type": "transform"
-                    },
-                    {
-                        "castShadow": true,
-                        "cullBackFaces": true,
-                        "file": "./data/Bodemonderzoek/models/oilstain/oilStain.fbx",
-                        "materialoverrides": [
-                            {
-                                "texture": "./data/Bodemonderzoek/models/oilstain/oil_S.png"
-                            }
-                        ],
-                        "type": "modelrenderer"
-                    }
-                ],
-                "name": "oilStain.fbx",
-                "uuid": "60809b78-6ccc-4298-9375-00c82efde972"
-            },
-            {
-                "components": [
-                    {
-                        "position": [
-                            25,
-                            0.0,
-                            2.55716848373413
-                        ],
-                        "rotation": [
-                            -2.14280913013454e-08,
-                            0.284015357494354,
-                            7.234002197265e-08,
-                            0.95881974697113
+                            -2.88722983299294e-08,
+                            0.382683455944061,
+                            6.97038942121253e-08,
+                            0.923879504203796
                         ],
                         "scale": [
                             1,
@@ -351,6 +315,174 @@
                 ],
                 "name": "wall.fbx",
                 "uuid": "bd402511-3ae3-47cb-a62c-dd54fe91bb6e"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -1.08265614509583,
+                            0.0,
+                            4.78028583526611
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/oilstain/oilStain.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "oilStain.fbx",
+                "uuid": "a422df56-3a06-44b4-b279-356219b7ccec"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -0.214214995503426,
+                            0.0,
+                            4.50120735168457
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/oilstain/oilStain.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "oilStain.fbx",
+                "uuid": "d77143dc-875a-46e1-93a0-e222a62b3eda"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            11,
+                            0.0,
+                            -9.5
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.923879504203796,
+                            0.0,
+                            0.382683426141739
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/fire door/fire door.obj",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fire door.obj",
+                "uuid": "269bd43e-47b3-498f-b7ef-7cfd2fdfd8ce"
             }
         ],
         "name": "Root",

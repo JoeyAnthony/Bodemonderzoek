@@ -10,6 +10,7 @@
 #include <string>
 #include "NodeLoader.h"
 
+using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
 	vrlib::Vive vive;
 	vrlib::tien::Tien Engine;
