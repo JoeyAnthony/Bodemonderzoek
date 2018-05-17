@@ -9,6 +9,9 @@
 #include <glm\glm.hpp>
 #include <string>
 #include "NodeLoader.h"
+#include "Turnable.h"
+#include "Door.h"
+#include "Manhole.h"
 
 using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
@@ -31,4 +34,6 @@ public:
 private:
 	bool showDebug;
 	std::vector<NodeLoader> nodes;
+	Turnable * door;
+	Turnable * manhole;
 };

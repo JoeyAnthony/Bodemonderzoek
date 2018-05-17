@@ -16,6 +16,5 @@ public:
 	glm::vec3 position;
 	std::string name, path;
 	Node* node;
-
 };
 
