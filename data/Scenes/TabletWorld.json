@@ -111,6 +111,74 @@
                 ],
                 "name": "paul.dae",
                 "uuid": "601363c7-867a-4273-9b35-9e9422d6fa46"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            8,
+                            0.0,
+                            10
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/buildings/Stalling/stalling.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "stalling.fbx",
+                "uuid": "0b4f37ff-a69e-4ff0-85c0-e1320e12370a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -0.162273406982422,
+                            0.0,
+                            -19.296142578125
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/buildings/firestation/groundFloor_v1.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "groundFloor_v1.fbx",
+                "uuid": "c7880d8b-0b18-4a09-98ed-b5b2d84c4129"
             }
         ],
         "name": "Root",

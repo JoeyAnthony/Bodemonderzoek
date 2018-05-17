@@ -7,11 +7,13 @@
 #include <VrLib/HtcVive.h>
 #include <VrLib/Device.h>
 #include <glm/glm.hpp>
+#include "MainShader.h"
 
 class Bodemonderzoek : public vrlib::Application
 {
 	vrlib::Vive vive;
 	vrlib::tien::Tien Engine;
+	MainShader mainShader;
 
 public:
 	Bodemonderzoek();
@@ -25,22 +27,4 @@ public:
 	void loadScene();
 private:
 	bool showDebug;
-
-	vrlib::Texture* mixmap_texture;
-	vrlib::Texture* texture0;
-	vrlib::Texture* texture1;
-
-	enum class Uniforms
-	{
-		modelMatrix,
-		projectionMatrix,
-		viewMatrix,
-		s_mixmap,
-		s_texture0,
-		s_texture1,
-		diffuseColor,
-		textureFactor
-	};
-
-	vrlib::gl::Shader<Uniforms>* shader;
 };
