@@ -1,153 +1,14 @@
 {
-    "meshes": [
-        {
-            "id": "c736a71f-38c0-41d5-b70a-a47322c76e19",
-            "indices": [
-                0,
-                1,
-                2,
-                0,
-                2,
-                3
-            ],
-            "material": {
-                "color": {
-                    "ambient": [
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "diffuse": [
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071
-                    ],
-                    "shinyness": 0.0,
-                    "specular": [
-                        1,
-                        1,
-                        1
-                    ]
-                },
-                "diffuse": "./data/Bodemonderzoek/textures/mixmap.png"
-            },
-            "vertices": [
-                {
-                    "bitan": [
-                        1,
-                        0.0,
-                        0.0
-                    ],
-                    "normal": [
-                        0.0,
-                        1,
-                        0.0
-                    ],
-                    "pos": [
-                        -0.5,
-                        0.0,
-                        -0.5
-                    ],
-                    "tan": [
-                        0.0,
-                        0.0,
-                        1
-                    ],
-                    "tex": [
-                        0.0,
-                        0.0
-                    ]
-                },
-                {
-                    "bitan": [
-                        1,
-                        0.0,
-                        0.0
-                    ],
-                    "normal": [
-                        0.0,
-                        1,
-                        0.0
-                    ],
-                    "pos": [
-                        -0.5,
-                        0.0,
-                        0.5
-                    ],
-                    "tan": [
-                        0.0,
-                        0.0,
-                        1
-                    ],
-                    "tex": [
-                        0.0,
-                        1
-                    ]
-                },
-                {
-                    "bitan": [
-                        1,
-                        0.0,
-                        0.0
-                    ],
-                    "normal": [
-                        0.0,
-                        1,
-                        0.0
-                    ],
-                    "pos": [
-                        0.5,
-                        0.0,
-                        0.5
-                    ],
-                    "tan": [
-                        0.0,
-                        0.0,
-                        1
-                    ],
-                    "tex": [
-                        1,
-                        1
-                    ]
-                },
-                {
-                    "bitan": [
-                        1,
-                        0.0,
-                        0.0
-                    ],
-                    "normal": [
-                        0.0,
-                        1,
-                        0.0
-                    ],
-                    "pos": [
-                        0.5,
-                        0.0,
-                        -0.5
-                    ],
-                    "tan": [
-                        0.0,
-                        0.0,
-                        1
-                    ],
-                    "tex": [
-                        1,
-                        0.0
-                    ]
-                }
-            ]
-        }
-    ],
+    "meshes": [],
     "scene": {
         "children": [
             {
                 "components": [
                     {
                         "position": [
-                            1,
+                            0.0,
                             20,
-                            1
+                            0.500000059604645
                         ],
                         "rotation": [
                             0.420735508203506,
@@ -175,7 +36,7 @@
                         "intensity": 10,
                         "lighttype": "directional",
                         "range": 1000,
-                        "shadow": "none",
+                        "shadow": "shadowmap",
                         "spotlightAngle": 45,
                         "type": "light"
                     }
@@ -221,49 +82,15 @@
                 "components": [
                     {
                         "position": [
-                            -1.31327378749847,
-                            0.0,
-                            0.652087211608887
-                        ],
-                        "rotation": [
-                            -0.499999970197678,
-                            0.499999970197678,
-                            0.499999970197678,
-                            0.499999970197678
-                        ],
-                        "scale": [
-                            1,
-                            1,
-                            1
-                        ],
-                        "type": "transform"
-                    },
-                    {
-                        "castShadow": true,
-                        "cullBackFaces": true,
-                        "file": "./data/models/Characters/Bodies/paul/paul.dae",
-                        "materialoverrides": [
-                            null
-                        ],
-                        "type": "modelrenderer"
-                    }
-                ],
-                "name": "paul.dae",
-                "uuid": "601363c7-867a-4273-9b35-9e9422d6fa46"
-            },
-            {
-                "components": [
-                    {
-                        "position": [
-                            25,
+                            8,
                             0.0,
                             10
                         ],
                         "rotation": [
                             0.0,
-                            -0.70710676908493,
                             0.0,
-                            0.70710676908493
+                            0.0,
+                            1
                         ],
                         "scale": [
                             1,
@@ -289,9 +116,9 @@
                 "components": [
                     {
                         "position": [
-                            20,
+                            -0.162273406982422,
                             0.0,
-                            -39
+                            -19.296142578125
                         ],
                         "rotation": [
                             0.0,
@@ -323,9 +150,45 @@
                 "components": [
                     {
                         "position": [
+                            -30,
                             0.0,
-                            -5,
-                            0.0
+                            -11.7346000671387
+                        ],
+                        "rotation": [
+                            -4.37113847340243e-08,
+                            -1,
+                            -4.37113847340243e-08,
+                            -4.37113918394516e-08
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/diesel_generator_fbx/diesel_generator.fbx",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "diesel_generator.fbx",
+                "uuid": "b2b7e013-fe93-492d-a38a-8aa230329fcd"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.1805000305176,
+                            0.0,
+                            3
                         ],
                         "rotation": [
                             0.0,
@@ -334,20 +197,406 @@
                             1
                         ],
                         "scale": [
-                            250,
-                            1,
-                            250
+                            0.0299999993294477,
+                            0.0299999993294477,
+                            0.0299999993294477
                         ],
                         "type": "transform"
                     },
                     {
                         "castShadow": true,
-                        "mesh": "c736a71f-38c0-41d5-b70a-a47322c76e19",
-                        "type": "meshrenderer"
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/moskvitch_402(fbx)/moskvitch.FBX",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
                     }
                 ],
-                "name": "plane",
-                "uuid": "a66f7456-9a24-4bc7-8490-1c5018d286a2"
+                "name": "moskvitch.FBX",
+                "uuid": "9cbbd23c-a3c7-4f95-a83f-ea2a2e4c81ca"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.1805000305176,
+                            0.0,
+                            17
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            0.0299999993294477,
+                            0.0299999993294477,
+                            0.0299999993294477
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/moskvitch_402(fbx)/moskvitch.FBX",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "moskvitch.FBX",
+                "uuid": "5a5ff777-6978-40e1-a189-557cac5587ba"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.1804895401001,
+                            0.0,
+                            10
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            0.0299999993294477,
+                            0.0299999993294477,
+                            0.0299999993294477
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/moskvitch_402(fbx)/moskvitch.FBX",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "moskvitch.FBX",
+                "uuid": "c9a694ff-4311-4638-9c40-a20dbb40ddc9"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -34.1072998046875,
+                            0.0,
+                            -6.80000019073486
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence2/fence2.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fence2.dae",
+                "uuid": "9a07adc2-1b4d-47c3-93d7-d0a1da1d603b"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -35.9601440429688,
+                            0.0,
+                            -6.80000019073486
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            0.0139594664797187
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence2/fence2.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fence2.dae",
+                "uuid": "4aa87027-148e-4b34-a065-24a12f174558"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            100,
+                            0.0,
+                            110
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            55,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence1/fence1.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fence1.dae",
+                "uuid": "38309dc2-80d4-4dba-aedc-8d92ea59781c"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -95,
+                            0.0,
+                            98.5869979858398
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            50,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence1/fence1.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fence1.dae",
+                "uuid": "333ecedb-8dfb-48d5-a796-8bb8a39757d7"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -95.7669982910156,
+                            0.0,
+                            115
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            55,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence1/fence1.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fence1.dae",
+                "uuid": "05e03cfe-8227-4588-8658-0e17f333ac04"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -95.7379989624023,
+                            0.0,
+                            -95.2109985351563
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            50,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence1/fence1.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fence1.dae",
+                "uuid": "4f33eec7-b5e5-4951-9ee7-3c20275cf002"
             }
         ],
         "name": "Root",

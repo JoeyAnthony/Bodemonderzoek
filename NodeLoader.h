@@ -14,6 +14,7 @@ public:
 
 	glm::quat rotation;
 	glm::vec3 position;
+	glm::vec3 scale;
 	std::string name, path;
 	Node* node;
 };

@@ -150,40 +150,6 @@
                 "components": [
                     {
                         "position": [
-                            0.0,
-                            0.0,
-                            0.0
-                        ],
-                        "rotation": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            1
-                        ],
-                        "scale": [
-                            50,
-                            1,
-                            50
-                        ],
-                        "type": "transform"
-                    },
-                    {
-                        "castShadow": true,
-                        "cullBackFaces": true,
-                        "file": "./data/Models/Environment/Building Blocks/Modules/floortiles.fbx",
-                        "materialoverrides": [
-                            null
-                        ],
-                        "type": "modelrenderer"
-                    }
-                ],
-                "name": "floortiles.fbx",
-                "uuid": "93d94cfc-41c7-4880-b985-2c2929495676"
-            },
-            {
-                "components": [
-                    {
-                        "position": [
                             50,
                             0.0,
                             0.0
