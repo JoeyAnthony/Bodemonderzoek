@@ -18,8 +18,10 @@ void Manhole::Open()
 	if (isOpen) return;
 	object->rotation.x -= step;
 	object->rotation.w = cos(object->rotation.x);
-	object->position.y = sin(-object->rotation.x) + 1;
+
+	object->position.y = sin(-object->rotation.x);
 	object->position.z = cos(object->rotation.x);
+
 	if (object->rotation.x <= -radiant) {
 		isOpen = true;
 	}
@@ -31,8 +33,10 @@ void Manhole::Close()
 	if (!isOpen) return;
 	object->rotation.x += step;
 	object->rotation.w = cos(object->rotation.x);
-	object->position.y = sin(-object->rotation.x) + 1;
+
+	object->position.y = sin(-object->rotation.x);
 	object->position.z = cos(object->rotation.x);
+
 	if (object->rotation.x >= 0.0) {
 		isOpen = false;
 	}
