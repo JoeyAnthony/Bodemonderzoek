@@ -82,15 +82,15 @@
                 "components": [
                     {
                         "position": [
-                            8,
+                            25,
                             0.0,
                             10
                         ],
                         "rotation": [
                             0.0,
+                            -0.70710676908493,
                             0.0,
-                            0.0,
-                            1
+                            0.70710676908493
                         ],
                         "scale": [
                             1,
@@ -116,9 +116,9 @@
                 "components": [
                     {
                         "position": [
-                            -0.162273406982422,
+                            19,
                             0.0,
-                            -19.296142578125
+                            -39
                         ],
                         "rotation": [
                             0.0,
@@ -150,9 +150,9 @@
                 "components": [
                     {
                         "position": [
-                            -30,
+                            -10.5,
                             0.0,
-                            -11.7346000671387
+                            -31.7346000671387
                         ],
                         "rotation": [
                             -4.37113847340243e-08,
@@ -283,120 +283,6 @@
                 ],
                 "name": "moskvitch.FBX",
                 "uuid": "c9a694ff-4311-4638-9c40-a20dbb40ddc9"
-            },
-            {
-                "components": [
-                    {
-                        "position": [
-                            -34.1072998046875,
-                            0.0,
-                            -6.80000019073486
-                        ],
-                        "rotation": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            1
-                        ],
-                        "scale": [
-                            1,
-                            1,
-                            1
-                        ],
-                        "type": "transform"
-                    },
-                    {
-                        "castShadow": true,
-                        "cullBackFaces": true,
-                        "file": "./data/Models/Environment/Building Blocks/Modules/fence2/fence2.dae",
-                        "materialoverrides": [
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": "modelrenderer"
-                    }
-                ],
-                "name": "fence2.dae",
-                "uuid": "9a07adc2-1b4d-47c3-93d7-d0a1da1d603b"
-            },
-            {
-                "components": [
-                    {
-                        "position": [
-                            -35.9601440429688,
-                            0.0,
-                            -6.80000019073486
-                        ],
-                        "rotation": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            1
-                        ],
-                        "scale": [
-                            1,
-                            1,
-                            0.0139594664797187
-                        ],
-                        "type": "transform"
-                    },
-                    {
-                        "castShadow": true,
-                        "cullBackFaces": true,
-                        "file": "./data/Models/Environment/Building Blocks/Modules/fence2/fence2.dae",
-                        "materialoverrides": [
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": "modelrenderer"
-                    }
-                ],
-                "name": "fence2.dae",
-                "uuid": "4aa87027-148e-4b34-a065-24a12f174558"
             },
             {
                 "components": [
@@ -597,6 +483,63 @@
                 ],
                 "name": "fence1.dae",
                 "uuid": "4f33eec7-b5e5-4951-9ee7-3c20275cf002"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -14.9667959213257,
+                            0.0,
+                            -26.5037384033203
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence2/fence2.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fence2.dae",
+                "uuid": "2c95efef-05d4-48eb-a004-c69e18bed03d"
             }
         ],
         "name": "Root",
