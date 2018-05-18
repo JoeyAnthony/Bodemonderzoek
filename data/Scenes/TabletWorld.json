@@ -1,14 +1,153 @@
 {
-    "meshes": [],
+    "meshes": [
+        {
+            "id": "c736a71f-38c0-41d5-b70a-a47322c76e19",
+            "indices": [
+                0,
+                1,
+                2,
+                0,
+                2,
+                3
+            ],
+            "material": {
+                "color": {
+                    "ambient": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "diffuse": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "shinyness": 0.0,
+                    "specular": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "diffuse": "./data/Bodemonderzoek/textures/mixmap.png"
+            },
+            "vertices": [
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        -0.5,
+                        0.0,
+                        -0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        0.0,
+                        0.0
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        -0.5,
+                        0.0,
+                        0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        0.0,
+                        1
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        0.5,
+                        0.0,
+                        0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        0.5,
+                        0.0,
+                        -0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        1,
+                        0.0
+                    ]
+                }
+            ]
+        }
+    ],
     "scene": {
         "children": [
             {
                 "components": [
                     {
                         "position": [
-                            0.0,
+                            1,
                             20,
-                            0.500000059604645
+                            1
                         ],
                         "rotation": [
                             0.420735508203506,
@@ -36,7 +175,7 @@
                         "intensity": 10,
                         "lighttype": "directional",
                         "range": 1000,
-                        "shadow": "shadowmap",
+                        "shadow": "none",
                         "spotlightAngle": 45,
                         "type": "light"
                     }
@@ -116,15 +255,15 @@
                 "components": [
                     {
                         "position": [
-                            8,
+                            25,
                             0.0,
                             10
                         ],
                         "rotation": [
                             0.0,
+                            -0.70710676908493,
                             0.0,
-                            0.0,
-                            1
+                            0.70710676908493
                         ],
                         "scale": [
                             1,
@@ -150,9 +289,9 @@
                 "components": [
                     {
                         "position": [
-                            -0.162273406982422,
+                            20,
                             0.0,
-                            -19.296142578125
+                            -39
                         ],
                         "rotation": [
                             0.0,
@@ -179,6 +318,36 @@
                 ],
                 "name": "groundFloor_v1.fbx",
                 "uuid": "c7880d8b-0b18-4a09-98ed-b5b2d84c4129"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            -5,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            250,
+                            1,
+                            250
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "mesh": "c736a71f-38c0-41d5-b70a-a47322c76e19",
+                        "type": "meshrenderer"
+                    }
+                ],
+                "name": "plane",
+                "uuid": "a66f7456-9a24-4bc7-8490-1c5018d286a2"
             }
         ],
         "name": "Root",

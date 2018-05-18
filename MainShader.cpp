@@ -20,16 +20,19 @@ vrlib::gl::Shader<Uniforms>* MainShader::mainShader()
 	shader->registerUniform(Uniforms::s_mixmap, "s_mixmap");
 	shader->registerUniform(Uniforms::s_texture0, "s_texture0");
 	shader->registerUniform(Uniforms::s_texture1, "s_texture1");
+	shader->registerUniform(Uniforms::s_texture2, "s_texture2");
 	shader->registerUniform(Uniforms::diffuseColor, "diffuseColor");
 	shader->registerUniform(Uniforms::textureFactor, "textureFactor");
 	shader->use();
 	shader->setUniform(Uniforms::s_mixmap, 0);
 	shader->setUniform(Uniforms::s_texture0, 1);
 	shader->setUniform(Uniforms::s_texture1, 2);
+	shader->setUniform(Uniforms::s_texture2, 3);
 
 	mixmap_texture = vrlib::Texture::loadCached("data/Bodemonderzoek/textures/mixmap.png");
 	texture0 = vrlib::Texture::loadCached("data/Bodemonderzoek/textures/GroundTiles/grassTile_C.png");
-	texture1 = vrlib::Texture::loadCached("data/Bodemonderzoek/textures/GroundTiles/concrete_C.png");
+	texture1 = vrlib::Texture::loadCached("data/Bodemonderzoek/textures/GroundTiles/asphalt_C.png");
+	texture2 = vrlib::Texture::loadCached("data/Bodemonderzoek/textures/GroundTiles/concrete_C.png");
 
 	return shader;
 }
@@ -49,6 +52,8 @@ void MainShader::mainDraw(const glm::mat4 &projectionMatrix, const glm::mat4 &mo
 	texture0->bind();
 	glActiveTexture(GL_TEXTURE2);
 	texture1->bind();
+	glActiveTexture(GL_TEXTURE3);
+	texture2->bind();
 	glActiveTexture(GL_TEXTURE0);
 
 	//dit opbouwen moet natuurlijk niet ieder frame, maar voor 1 quad kan 't wel hier steeds
