@@ -17,4 +17,5 @@ private:
 	vrlib::Texture* mixmap_texture;
 	vrlib::Texture* texture0;
 	vrlib::Texture* texture1;
+	vrlib::Texture* texture2;
 };
