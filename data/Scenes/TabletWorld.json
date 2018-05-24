@@ -288,9 +288,9 @@
                 "components": [
                     {
                         "position": [
-                            100,
+                            80,
                             0.0,
-                            110
+                            18.7999992370605
                         ],
                         "rotation": [
                             0.0,
@@ -299,7 +299,7 @@
                             0.70710676908493
                         ],
                         "scale": [
-                            55,
+                            14.7200002670288,
                             1,
                             1
                         ],
@@ -331,25 +331,25 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence1.dae",
+                "name": "NorthWall.dae",
                 "uuid": "38309dc2-80d4-4dba-aedc-8d92ea59781c"
             },
             {
                 "components": [
                     {
                         "position": [
-                            -95,
+                            -50,
                             0.0,
-                            98.5869979858398
+                            66
                         ],
                         "rotation": [
                             0.0,
+                            0.173648178577423,
                             0.0,
-                            0.0,
-                            1
+                            0.984807729721069
                         ],
                         "scale": [
-                            50,
+                            34.0999984741211,
                             1,
                             1
                         ],
@@ -381,16 +381,16 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence1.dae",
+                "name": "EastWall.dae",
                 "uuid": "333ecedb-8dfb-48d5-a796-8bb8a39757d7"
             },
             {
                 "components": [
                     {
                         "position": [
-                            -95.7669982910156,
+                            -50,
                             0.0,
-                            115
+                            24.7000007629395
                         ],
                         "rotation": [
                             0.0,
@@ -399,7 +399,7 @@
                             0.70710676908493
                         ],
                         "scale": [
-                            55,
+                            20.2999992370605,
                             1,
                             1
                         ],
@@ -431,16 +431,16 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence1.dae",
+                "name": "SouthWall2.dae",
                 "uuid": "05e03cfe-8227-4588-8658-0e17f333ac04"
             },
             {
                 "components": [
                     {
                         "position": [
-                            -95.7379989624023,
+                            -50,
                             0.0,
-                            -95.2109985351563
+                            -57.2109985351563
                         ],
                         "rotation": [
                             0.0,
@@ -449,7 +449,7 @@
                             1
                         ],
                         "scale": [
-                            50,
+                            30.2299995422363,
                             1,
                             1
                         ],
@@ -481,7 +481,7 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence1.dae",
+                "name": "WestWall.dae",
                 "uuid": "4f33eec7-b5e5-4951-9ee7-3c20275cf002"
             },
             {
@@ -538,8 +538,256 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence2.dae",
+                "name": "SmallWall.dae",
                 "uuid": "2c95efef-05d4-48eb-a004-c69e18bed03d"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -50,
+                            0.0,
+                            30.8964996337891
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            0.800000011920929,
+                            0.200000002980232,
+                            0.200000002980232
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/steel fence/fance.FBX",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "SouthGate.FBX",
+                "uuid": "e7b8e6b5-52ab-498f-b453-9bc8127b36c3"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -50,
+                            0.0,
+                            66.5544738769531
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            7.30000019073486,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence1/fence1.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "SouthWall2.dae",
+                "uuid": "7d941cd8-3530-4ad4-9e45-ecad25b90e4a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            76.6999969482422,
+                            0.0,
+                            -48.7999992370605
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.544494152069092,
+                            0.0,
+                            0.838764667510986
+                        ],
+                        "scale": [
+                            1.13999998569489,
+                            0.200000002980232,
+                            0.200000002980232
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/steel fence/fance.FBX",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "NorthGate.FBX",
+                "uuid": "36eaea88-1b2b-4d87-b8e7-d0dbe7111fa6"
             }
         ],
         "name": "Root",
