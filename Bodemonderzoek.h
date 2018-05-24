@@ -13,6 +13,7 @@
 #include "Door.h"
 #include "Manhole.h"
 #include "MainShader.h"
+#include "HandController.h"
 
 using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
@@ -32,10 +33,14 @@ public:
 	virtual void latePreFrame() override;
 
 	void loadScene();
-	NodeLoader* searchNode(std::string searchTerm);
+	NodeLoader * searchNode(std::string searchTerm);
 private:
 	bool showDebug;
 	std::vector<NodeLoader> nodes;
+
+	HandController * rightHand;
+	HandController * leftHand;
+
 	Turnable * doorLeft;
 	Turnable * doorRight;
 	Turnable * manhole;

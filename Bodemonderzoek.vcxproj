@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClInclude Include="Bodemonderzoek.h" />
     <ClInclude Include="Door.h" />
+    <ClInclude Include="HandController.h" />
     <ClInclude Include="MainShader.h" />
     <ClInclude Include="Manhole.h" />
     <ClInclude Include="NodeLoader.h" />
@@ -168,6 +169,7 @@
   <ItemGroup>
     <ClCompile Include="Bodemonderzoek.cpp" />
     <ClCompile Include="Door.cpp" />
+    <ClCompile Include="HandController.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainShader.cpp" />
     <ClCompile Include="Manhole.cpp" />
