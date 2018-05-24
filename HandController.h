@@ -16,10 +16,10 @@ class HandController : public vrlib::tien::components::Renderable
 	};
 
 private:
-	vrlib::Vive::Controller controller;
 	float debugspeed = 0.3f;
 
 public:
+	vrlib::Vive::Controller controller;
 	void initHand();
 	void update(float elapsedTime, vrlib::tien::Scene& scene) override;
 	void postUpdate(vrlib::tien::Scene& scene) override;

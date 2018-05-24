@@ -116,7 +116,7 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, double totalTim
 
 		if (closestClickedNode)
 		{
-			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = true;
+			//teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = true;
 			if (glm::abs(closestHitPosition.y) < 0.1)
 			{
 				teleportTarget->transform->position = closestHitPosition;
@@ -135,6 +135,5 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, double totalTim
 		}
 		else
 			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
-
 	}
 }
