@@ -10,8 +10,8 @@ public:
 	NodeLoader * object;
 	bool isOpen = false;
 
-	float radiant = 0.7;
-	float step = 0.01;
+	float radiant = 0.7f;
+	float step = 0.01f;
 
 	virtual void Open();
 	virtual void Close();
