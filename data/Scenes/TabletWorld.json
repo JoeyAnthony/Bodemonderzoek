@@ -1,5 +1,144 @@
 {
-    "meshes": [],
+    "meshes": [
+        {
+            "id": "552252c6-161d-4b04-8b4e-cad6e0afc23d",
+            "indices": [
+                2,
+                1,
+                0,
+                3,
+                2,
+                0
+            ],
+            "material": {
+                "color": {
+                    "ambient": [
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "diffuse": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "shinyness": 0.0,
+                    "specular": [
+                        1,
+                        1,
+                        1
+                    ]
+                },
+                "diffuse": "./data/Models/Decoration/Misc/brievenbus/brievenbus.png"
+            },
+            "vertices": [
+                {
+                    "bitan": [
+                        0.0,
+                        0.0,
+                        -1
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        -1,
+                        0.0,
+                        -1
+                    ],
+                    "tan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "tex": [
+                        0.0,
+                        1
+                    ]
+                },
+                {
+                    "bitan": [
+                        0.0,
+                        0.0,
+                        -1
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        1,
+                        0.0,
+                        -1
+                    ],
+                    "tan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "tex": [
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "bitan": [
+                        0.0,
+                        0.0,
+                        -1
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        1,
+                        0.0,
+                        1
+                    ],
+                    "tan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "tex": [
+                        1,
+                        0.0
+                    ]
+                },
+                {
+                    "bitan": [
+                        0.0,
+                        0.0,
+                        -1
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        -1,
+                        0.0,
+                        1
+                    ],
+                    "tan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "tex": [
+                        0.0,
+                        0.0
+                    ]
+                }
+            ]
+        }
+    ],
     "scene": {
         "children": [
             {
@@ -186,15 +325,15 @@
                 "components": [
                     {
                         "position": [
-                            -11.1805000305176,
                             0.0,
-                            3
+                            0.0,
+                            24
                         ],
                         "rotation": [
                             0.0,
+                            0.70710676908493,
                             0.0,
-                            0.0,
-                            1
+                            0.70710676908493
                         ],
                         "scale": [
                             0.0299999993294477,
@@ -220,15 +359,15 @@
                 "components": [
                     {
                         "position": [
-                            -11.1805000305176,
+                            0.0,
                             0.0,
                             17
                         ],
                         "rotation": [
                             0.0,
+                            0.70710676908493,
                             0.0,
-                            0.0,
-                            1
+                            0.70710676908493
                         ],
                         "scale": [
                             0.0299999993294477,
@@ -254,15 +393,15 @@
                 "components": [
                     {
                         "position": [
-                            -11.1804895401001,
+                            -56,
                             0.0,
-                            10
+                            30
                         ],
                         "rotation": [
                             0.0,
+                            0.258819043636322,
                             0.0,
-                            0.0,
-                            1
+                            0.965925812721252
                         ],
                         "scale": [
                             0.0299999993294477,
@@ -288,9 +427,9 @@
                 "components": [
                     {
                         "position": [
-                            100,
+                            80,
                             0.0,
-                            110
+                            18.7999992370605
                         ],
                         "rotation": [
                             0.0,
@@ -299,7 +438,7 @@
                             0.70710676908493
                         ],
                         "scale": [
-                            55,
+                            14.7200002670288,
                             1,
                             1
                         ],
@@ -331,25 +470,25 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence1.dae",
+                "name": "NorthWall.dae",
                 "uuid": "38309dc2-80d4-4dba-aedc-8d92ea59781c"
             },
             {
                 "components": [
                     {
                         "position": [
-                            -95,
+                            -50,
                             0.0,
-                            98.5869979858398
+                            66
                         ],
                         "rotation": [
                             0.0,
+                            0.173648178577423,
                             0.0,
-                            0.0,
-                            1
+                            0.984807729721069
                         ],
                         "scale": [
-                            50,
+                            34.0999984741211,
                             1,
                             1
                         ],
@@ -381,16 +520,16 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence1.dae",
+                "name": "EastWall.dae",
                 "uuid": "333ecedb-8dfb-48d5-a796-8bb8a39757d7"
             },
             {
                 "components": [
                     {
                         "position": [
-                            -95.7669982910156,
+                            -50,
                             0.0,
-                            115
+                            24.7000007629395
                         ],
                         "rotation": [
                             0.0,
@@ -399,7 +538,7 @@
                             0.70710676908493
                         ],
                         "scale": [
-                            55,
+                            20.2999992370605,
                             1,
                             1
                         ],
@@ -431,16 +570,16 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence1.dae",
+                "name": "SouthWall2.dae",
                 "uuid": "05e03cfe-8227-4588-8658-0e17f333ac04"
             },
             {
                 "components": [
                     {
                         "position": [
-                            -95.7379989624023,
+                            -50,
                             0.0,
-                            -95.2109985351563
+                            -57.2109985351563
                         ],
                         "rotation": [
                             0.0,
@@ -449,7 +588,7 @@
                             1
                         ],
                         "scale": [
-                            50,
+                            30.2299995422363,
                             1,
                             1
                         ],
@@ -481,7 +620,7 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence1.dae",
+                "name": "WestWall.dae",
                 "uuid": "4f33eec7-b5e5-4951-9ee7-3c20275cf002"
             },
             {
@@ -538,8 +677,1596 @@
                         "type": "modelrenderer"
                     }
                 ],
-                "name": "fence2.dae",
+                "name": "SmallWall.dae",
                 "uuid": "2c95efef-05d4-48eb-a004-c69e18bed03d"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -50,
+                            0.0,
+                            30.8964996337891
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            0.800000011920929,
+                            0.200000002980232,
+                            0.200000002980232
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/steel fence/fance.FBX",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "SouthGate.FBX",
+                "uuid": "e7b8e6b5-52ab-498f-b453-9bc8127b36c3"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -50,
+                            0.0,
+                            66.5544738769531
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            7.30000019073486,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Environment/Building Blocks/Modules/fence1/fence1.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "SouthWall2.dae",
+                "uuid": "7d941cd8-3530-4ad4-9e45-ecad25b90e4a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            76.6999969482422,
+                            0.0,
+                            -48.7999992370605
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.544494152069092,
+                            0.0,
+                            0.838764667510986
+                        ],
+                        "scale": [
+                            1.13999998569489,
+                            0.200000002980232,
+                            0.200000002980232
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/steel fence/fance.FBX",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "NorthGate.FBX",
+                "uuid": "36eaea88-1b2b-4d87-b8e7-d0dbe7111fa6"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -9.45693969726563,
+                            0.0,
+                            -5.90138912200928
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrelMetal/barrelMetal.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal.fbx",
+                "uuid": "0c8ac515-d18d-4cce-bafd-73cfc359566f"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -7.83006381988525,
+                            0.0,
+                            -5.70863914489746
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrelMetal/barrelMetal.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal.fbx",
+                "uuid": "89c1fb66-0dad-484c-b128-ddbfca7b6b10"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -8.11177253723145,
+                            0.0,
+                            -5.29839277267456
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrelMetal/barrelMetal.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal.fbx",
+                "uuid": "626ff516-313c-4301-b195-108e4cbc7b77"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -6.51706981658936,
+                            0.0,
+                            -12.6374368667603
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/acetone/acetone.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "acetone.fbx",
+                "uuid": "1f721799-210f-42f8-a6b2-a690874aa083"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -6.50034332275391,
+                            0.0,
+                            -14.4323997497559
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/acetone/acetone.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "acetone.fbx",
+                "uuid": "2727befc-47d1-4561-aa9a-c4de736a630c"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            1.88139629364014,
+                            0.0,
+                            -10.0157032012939
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/cartonBox_L/cartonBox_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "cartonBox_L.fbx",
+                "uuid": "1615d745-8997-4597-926b-aa34e9360f9e"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -9.38862323760986,
+                            0.0,
+                            -3.13222789764404
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/cartonBox_L/cartonBox_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "cartonBox_L.fbx",
+                "uuid": "cdddcd25-fcf8-4389-ab54-15407ff3a897"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            6.08920001983643,
+                            0.351615905761719,
+                            15.0995178222656
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.706984579563141,
+                            0.0,
+                            0.70722895860672
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/firehose/firehose.fbx",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "firehose.fbx",
+                "uuid": "a9655977-c13c-48ce-836d-15e9528870cc"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            6.48093032836914,
+                            0.0,
+                            -38.3315086364746
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/gasCylinder_L/gasCylinder_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "gasCylinder_L.fbx",
+                "uuid": "1c3bd942-89c2-4ce9-8da9-d8b2a476a8f4"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            7.43828010559082,
+                            0.0,
+                            -38.0837554931641
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/gasCylinder_L/gasCylinder_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "gasCylinder_L.fbx",
+                "uuid": "6de9d4a9-5d3b-4349-a21d-67d9a42dffad"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            6.68128395080566,
+                            0.0,
+                            -36.867546081543
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/gasCylinder_L/gasCylinder_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "gasCylinder_L.fbx",
+                "uuid": "919cd5b4-7787-4e14-acd0-16494488d675"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            12.8038539886475,
+                            0.0,
+                            -29.6467418670654
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/zincPallet/zincPallet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "zincPallet.fbx",
+                "uuid": "03e1bf2f-91e2-4f4f-84ff-c7988117807a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            9.58148384094238,
+                            -2.38418579101563e-07,
+                            -34.081615447998
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/zincPallet/zincPallet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "zincPallet.fbx",
+                "uuid": "b3f1d978-9162-446f-962f-3ac3ae01911a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            6.5582389831543,
+                            -2.38418579101563e-07,
+                            -37.1253890991211
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/water stain/waterStain.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "waterStain.fbx",
+                "uuid": "1b9c8fb9-bc89-4347-98c6-f1f8b3ad464a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            9.12569236755371,
+                            0.0,
+                            -33.4538879394531
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/water stain/waterStain.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "waterStain.fbx",
+                "uuid": "fbbde590-2850-4509-956e-e29bbd959ae7"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.738094091415405,
+                            2.38418579101563e-07,
+                            -31.9491004943848
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/tinBlocks/tinBlocks_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "tinBlocks_L.fbx",
+                "uuid": "e93aa1d2-65ee-41ec-832d-bb71bd83fb7c"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            13.3202266693115,
+                            0.0,
+                            -37.5578804016113
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            0.100000001490116,
+                            0.100000001490116,
+                            0.100000001490116
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/stellingTestModel/stellingTestModel.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "stellingTestModel.fbx",
+                "uuid": "d04ff6a9-d4fb-4b54-82c8-14302145064a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            17.2244625091553,
+                            0.0,
+                            -29.0871925354004
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/copperCoil/copperCoil.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "copperCoil.fbx",
+                "uuid": "a86a02ae-fe14-405f-8d1f-611a78fd1ebd"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            17.097074508667,
+                            0.0,
+                            -18.8003768920898
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/frame/frame.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "frame.fbx",
+                "uuid": "4dcb9c5e-821b-43c3-b62c-aa4e4bba1e49"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            1.11630058288574,
+                            0.0,
+                            -28.1033210754395
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/potassiumDichromate/potassiumDichromate_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "potassiumDichromate_L.fbx",
+                "uuid": "f408d1fc-9ea8-452c-aa63-ddaac725f17a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            1.82215642929077,
+                            0.0,
+                            -37.5483551025391
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/pallet/pallet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "pallet.fbx",
+                "uuid": "0814c11c-3ad9-4396-9581-82ee031520a4"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            3.38738298416138,
+                            0.0,
+                            -37.1598587036133
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/pallet/pallet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "pallet.fbx",
+                "uuid": "c46e4805-cbab-4c52-889c-a58274fd8517"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            5.1803822517395,
+                            0.0,
+                            -37.4466361999512
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/oxygen/oxygen_False2.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "oxygen_False2.fbx",
+                "uuid": "0b8515c1-5d2f-4609-98af-408c920cf7f9"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -8.94029998779297,
+                            0.0,
+                            -28.6185836791992
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/oilstain/oilStain.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "oilStain.fbx",
+                "uuid": "bc92992e-5a2c-4568-b51f-24449d6d7ffa"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -9.68154335021973,
+                            0.0,
+                            -30.0408401489258
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/oilstain/oilStain.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "oilStain.fbx",
+                "uuid": "205b4ed5-ab1e-4290-a933-e0a84f6354af"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -0.833407640457153,
+                            0.562967300415039,
+                            -30.927490234375
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/nood telefoon/nood telefoon.fbx",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "nood telefoon.fbx",
+                "uuid": "295f57fe-f56c-4749-b26f-46a380f42f1b"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -2.68976259231567,
+                            0.0,
+                            -32.0573425292969
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/leakingLiquid/leakingLiquid.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "leakingLiquid.fbx",
+                "uuid": "6fcf3811-32ea-48a8-8d33-dc1a46708a08"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            41.4673805236816,
+                            0.0,
+                            -33.0965385437012
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Decoration/Bathroom/sink2/sink2.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "sink2.dae",
+                "uuid": "8e3492ae-2c0a-4e81-99cd-de5650e7b594"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            42.3937225341797,
+                            0.0,
+                            -27.3937454223633
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Decoration/Bathroom/bathtub/bathtub.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "bathtub.dae",
+                "uuid": "bd89fb93-c071-4545-bad0-c2b39ef8146f"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            40.7697143554688,
+                            0.0,
+                            -27.2344379425049
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Decoration/Bathroom/shower/shower.dae",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "shower.dae",
+                "uuid": "b19a601f-3e12-4e35-a963-2f546773426d"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            23.4232292175293,
+                            0.0,
+                            -21.5905227661133
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.342020124197006,
+                            0.0,
+                            0.939692616462708
+                        ],
+                        "scale": [
+                            0.400000005960464,
+                            0.400000005960464,
+                            0.400000005960464
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Decoration/Chairs/couch/couch.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "couch.fbx",
+                "uuid": "e9d880c8-9790-4007-842d-553e473be408"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            24.3251304626465,
+                            0.0,
+                            -24.1130104064941
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Decoration/Misc/garbage_bag/garbage_bag.dae",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "garbage_bag.dae",
+                "uuid": "7df15d4c-e990-413f-bf2f-fa650369d313"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            25.4263019561768,
+                            0.0,
+                            -23.2143459320068
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Decoration/Misc/garbage_bag/garbage_bag.dae",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "garbage_bag.dae",
+                "uuid": "2f6730d8-613b-4271-a2da-de5e5ed0657b"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            19.5201644897461,
+                            1.78120565414429,
+                            -26.4923858642578
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "mesh": "552252c6-161d-4b04-8b4e-cad6e0afc23d",
+                        "type": "meshrenderer"
+                    }
+                ],
+                "name": "brievenbus.png",
+                "uuid": "ca96ed64-68d4-4108-ac49-1ce565527df2"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            35.0615730285645,
+                            0.0,
+                            -21.2601947784424
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Decoration/Lockers/lockersCabinet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "lockersCabinet.fbx",
+                "uuid": "c4f2c83a-da00-46e4-b027-fef8117bf0e1"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            34.1370887756348,
+                            -4.76837158203125e-07,
+                            -23.834716796875
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Models/Decoration/Lockers/lockersCabinet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "lockersCabinet.fbx",
+                "uuid": "d1fac890-5758-4240-81ff-0ce8fd5b5a99"
             }
         ],
         "name": "Root",
