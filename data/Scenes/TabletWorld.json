@@ -137,6 +137,143 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": "b2f8a170-ddc0-410a-8ad1-cf2dd20ddf10",
+            "indices": [
+                0,
+                1,
+                2,
+                0,
+                2,
+                3
+            ],
+            "material": {
+                "color": {
+                    "ambient": [
+                        0.5,
+                        0.104471057653427,
+                        0.0885511934757233
+                    ],
+                    "diffuse": [
+                        0.699999988079071,
+                        0.311111092567444,
+                        0.416501343250275
+                    ],
+                    "shinyness": 0.0,
+                    "specular": [
+                        0.961596131324768,
+                        1,
+                        0.329179584980011
+                    ]
+                }
+            },
+            "vertices": [
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        -0.5,
+                        0.0,
+                        -0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        0.0,
+                        0.0
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        -0.5,
+                        0.0,
+                        0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        0.0,
+                        1
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        0.5,
+                        0.0,
+                        0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        1,
+                        1
+                    ]
+                },
+                {
+                    "bitan": [
+                        1,
+                        0.0,
+                        0.0
+                    ],
+                    "normal": [
+                        0.0,
+                        1,
+                        0.0
+                    ],
+                    "pos": [
+                        0.5,
+                        0.0,
+                        -0.5
+                    ],
+                    "tan": [
+                        0.0,
+                        0.0,
+                        1
+                    ],
+                    "tex": [
+                        1,
+                        0.0
+                    ]
+                }
+            ]
         }
     ],
     "scene": {
@@ -240,7 +377,7 @@
                     },
                     {
                         "castShadow": true,
-                        "cullBackFaces": true,
+                        "cullBackFaces": false,
                         "file": "./data/Bodemonderzoek/models/buildings/Stalling/stalling.fbx",
                         "materialoverrides": [
                             null
@@ -2097,6 +2234,20 @@
                             null
                         ],
                         "type": "modelrenderer"
+                    },
+                    {
+                        "collider": "box",
+                        "offset": [
+                            0.0,
+                            0.921383023262024,
+                            2.98023223876953e-08
+                        ],
+                        "size": [
+                            4.05475425720215,
+                            1.84276604652405,
+                            1.68244934082031
+                        ],
+                        "type": "collider"
                     }
                 ],
                 "name": "couch.fbx",
@@ -2267,6 +2418,324 @@
                 ],
                 "name": "lockersCabinet.fbx",
                 "uuid": "d1fac890-5758-4240-81ff-0ce8fd5b5a99"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            9.72180557250977,
+                            0.0,
+                            -120.816802978516
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/models/Environment/_Complete Scenes/realPD2/realPD2.fbx",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "realPD2.fbx",
+                "uuid": "02f20e82-b985-4b49-87e0-3ec6a54ca99c"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            20.3460998535156,
+                            0.0,
+                            -129.908996582031
+                        ],
+                        "rotation": [
+                            0.0,
+                            -1,
+                            0.0,
+                            -4.37113882867379e-08
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/models/Environment/_Complete Scenes/realPD2/realPD2.fbx",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "realPD2.fbx",
+                "uuid": "6392a3f9-c93a-45d3-87ce-6d8be74e2a3d"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            3.3145899772644,
+                            0.0,
+                            -124.901000976563
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            2.70000004768372,
+                            2
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/emergencyDoor/emergencyDoor.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "emergencyDoor.fbx",
+                "uuid": "f3549119-bcf7-4a7f-8e5e-6b232b28649b"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            0.0,
+                            -0.300000011920929,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            300,
+                            1,
+                            300
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": false,
+                        "mesh": "b2f8a170-ddc0-410a-8ad1-cf2dd20ddf10",
+                        "type": "meshrenderer"
+                    }
+                ],
+                "name": "plane",
+                "uuid": "77dc204c-1e18-4cd9-bfac-2d3bcb93d4e2"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            14.7655696868896,
+                            0.0,
+                            20.1149349212646
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            0.0160000007599592,
+                            0.0160000007599592,
+                            0.0160000007599592
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/Rio-FBX/Rio-FBX/rio.fbx",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "rio.fbx",
+                "uuid": "964934f5-943e-4257-acef-8f5ccc665ee2"
             }
         ],
         "name": "Root",

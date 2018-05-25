@@ -1,7 +1,6 @@
 #pragma once
 #include <VrLib\HtcVive.h>
 #include <VrLib\tien\Tien.h>
-#include <VrLib\tien\Scene.h>
 #include <VrLib\tien\Component.h>
 
 using namespace vrlib::tien;

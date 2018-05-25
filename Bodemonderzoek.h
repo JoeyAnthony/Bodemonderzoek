@@ -1,17 +1,12 @@
 
 #pragma once
-#include "Uniforms.h"
-
 #include <VrLib\Application.h>
 #include <VrLib\tien\Tien.h>
 #include <VrLib\HtcVive.h>
-#include <VrLib\Device.h>
 #include <glm\glm.hpp>
 #include <string>
 #include "NodeLoader.h"
 #include "Turnable.h"
-#include "Door.h"
-#include "Manhole.h"
 #include "MainShader.h"
 #include "HandController.h"
 
