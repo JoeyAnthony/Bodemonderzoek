@@ -1,7 +1,6 @@
 #pragma once
 #include <VrLib\HtcVive.h>
 #include <VrLib\tien\Tien.h>
-#include <VrLib\tien\Scene.h>
 #include <VrLib\tien\Component.h>
 
 using namespace vrlib::tien;
@@ -16,10 +15,10 @@ class HandController : public vrlib::tien::components::Renderable
 	};
 
 private:
-	vrlib::Vive::Controller controller;
 	float debugspeed = 0.3f;
 
 public:
+	vrlib::Vive::Controller controller;
 	void initHand();
 	void update(float elapsedTime, vrlib::tien::Scene& scene) override;
 	void postUpdate(vrlib::tien::Scene& scene) override;
