@@ -12,7 +12,6 @@ NodeLoader::NodeLoader(std::string path, std::string name, glm::vec3 position)
 	scale = glm::vec3(1,1,1);
 }
 
-
 NodeLoader::~NodeLoader()
 {
 }

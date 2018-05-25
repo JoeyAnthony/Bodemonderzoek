@@ -24,7 +24,7 @@ public:
 	void postUpdate(vrlib::tien::Scene& scene) override;
 
 	void drawRay(glm::mat4 view, glm::mat4 proj);
-	void checkTeleport(glm::mat4 data, Tien & engine, double totalTime);
+	void checkTeleport(glm::mat4 data, Tien & engine);
 
 	void drawDeferredPass() override;
 	void drawForwardPass() override {};
