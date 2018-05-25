@@ -280,6 +280,20 @@
                             null
                         ],
                         "type": "modelrenderer"
+                    },
+                    {
+                        "collider": "box",
+                        "offset": [
+                            6.19753837585449,
+                            1.93368053436279,
+                            -0.838634490966797
+                        ],
+                        "size": [
+                            120.74169921875,
+                            300.867370605469,
+                            650.763427734375
+                        ],
+                        "type": "collider"
                     }
                 ],
                 "name": "groundFloor_v1.fbx",
@@ -618,6 +632,20 @@
                             null
                         ],
                         "type": "modelrenderer"
+                    },
+                    {
+                        "collider": "box",
+                        "offset": [
+                            2.02999973297119,
+                            1,
+                            -0.0300000011920929
+                        ],
+                        "size": [
+                            100.059997558594,
+                            200,
+                            10.1000003814697
+                        ],
+                        "type": "collider"
                     }
                 ],
                 "name": "WestWall.dae",

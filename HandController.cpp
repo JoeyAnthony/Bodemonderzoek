@@ -11,7 +11,6 @@ void HandController::update(float elapsedTime, Scene & scene)
 {
 }
 
-
 void HandController::postUpdate(Scene & scene)
 {
 }
@@ -64,33 +63,25 @@ void HandController::RayRenderer::frameSetup(const glm::mat4 & projectionMatrix,
 	//renderContextForward;
 }
 
-void HandController::checkTeleport(glm::mat4 data, Tien& engine, double totalTime)
+void HandController::checkTeleport(glm::mat4 data, Tien& engine)
 {
 	teleportButton = controller.touchButton.getData();
 	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF)
 	{
-		teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
-		if (lastTeleportTime > totalTime)
+		glm::vec3 target = teleportTarget->transform->getGlobalPosition();
+		if (glm::abs(target.y) < 0.1)
 		{
-			glm::vec3 target = teleportTarget->transform->getGlobalPosition();
-			if (glm::abs(target.y) < 0.1)
-			{
-				glm::vec3 headPosition(data * glm::vec4(0, 0, 0, 1));
-				target.x -= headPosition.x;
-				target.z -= headPosition.z;
+			glm::vec3 headPosition(data * glm::vec4(0, 0, 0, 1));
+			target.x -= headPosition.x;
+			target.z -= headPosition.z;
 
-				engine.scene.cameraNode->transform->position = glm::vec3(target.x, 0, target.z);
-
-				glm::vec3 position((data * glm::vec4(0, 0, 0, 1)) + (engine.scene.cameraNode->transform->globalTransform * glm::vec4(0, 0, 0, 1)));
-			}
-		}		
+			engine.scene.cameraNode->transform->position = glm::vec3(target.x, 0, target.z);
+			glm::vec3 position((data * glm::vec4(0, 0, 0, 1)) + (engine.scene.cameraNode->transform->globalTransform * glm::vec4(0, 0, 0, 1)));
+		}
+		teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
 	}
 
-	if (teleportButton == vrlib::DigitalState::TOGGLE_ON) {
-		lastTeleportTime = totalTime + 500;
-	}
-
-	if (teleportButton == vrlib::DigitalState::ON)
+	if (teleportButton == vrlib::DigitalState::ON) 
 	{
 		glm::mat4 wandMat = controller.transform.getData();
 		vrlib::math::Ray pointer;
@@ -98,12 +89,14 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, double totalTim
 		pointer.mDir = glm::normalize(pointer.mOrigin - glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 1, 1)));
 		vrlib::tien::Node* closestClickedNode = nullptr;
 		glm::vec3 closestHitPosition;
-		float closest = 99999999.0f;
+		float closest = 100.0f;
 
 		engine.scene.castRay(pointer, [&, this](vrlib::tien::Node* node, float hitFraction, const glm::vec3 &hitPosition, const glm::vec3 &hitNormal)
 		{
 			bool collides = false;
-			node->fortree([&collides, node](vrlib::tien::Node* n) { collides |= node == n; });
+			this->node->fortree([&collides, node](vrlib::tien::Node* n) { collides |= node == n; });
+			if (collides)
+				return true;
 
 			if (hitFraction < closest && hitFraction > 0)
 			{
@@ -117,7 +110,7 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, double totalTim
 		if (closestClickedNode)
 		{
 			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = true;
-			if (glm::abs(closestHitPosition.y) < 0.1)
+			if (glm::abs(closestHitPosition.y) < 0.5f)
 			{
 				teleportTarget->transform->position = closestHitPosition;
 				teleportTargetPosition = closestHitPosition;
@@ -127,14 +120,13 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, double totalTim
 				glm::vec3 diff = closestHitPosition - pointer.mOrigin;
 				float length = glm::length(diff);
 				diff = glm::normalize(diff);
-				if (length > 0.25f)
-					length -= 0.25f;
+				if (length > 0.5f)
+					length -= 0.5f;
 				teleportTargetPosition = pointer.mOrigin + length * diff;
 				teleportTarget->transform->position = glm::vec3(teleportTargetPosition.x, 0, teleportTargetPosition.z);
 			}
 		}
 		else
 			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
-
 	}
 }
