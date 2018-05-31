@@ -23,8 +23,8 @@ public:
 	void update(float elapsedTime, vrlib::tien::Scene& scene) override;
 	void postUpdate(vrlib::tien::Scene& scene) override;
 
-	void drawRay(glm::mat4 view, glm::mat4 proj);
-	void checkTeleport(glm::mat4 data, Tien & engine);
+	glm::vec3 drawRay(glm::mat4 view, glm::mat4 proj);
+	void checkTeleport(glm::mat4 data, Tien & engine, glm::mat4 view, glm::mat4 proj);
 
 	void drawDeferredPass() override;
 	void drawForwardPass() override {};
@@ -37,4 +37,5 @@ public:
 	vrlib::tien::Node* teleportTarget = nullptr;
 	glm::vec3 teleportTargetPosition;
 	double lastTeleportTime = 0;
+	bool hasValidLocation = false;
 };

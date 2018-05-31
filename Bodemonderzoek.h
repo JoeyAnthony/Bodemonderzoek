@@ -9,6 +9,7 @@
 #include "Turnable.h"
 #include "MainShader.h"
 #include "HandController.h"
+#include "Manhole.h"
 
 using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
