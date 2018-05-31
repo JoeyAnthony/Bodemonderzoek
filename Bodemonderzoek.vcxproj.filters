@@ -51,8 +51,8 @@
     <ClInclude Include="HandController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GroundShader.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="TeleportDoor.h">
+      <Filter>Header Files\Turnable</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -82,6 +82,9 @@
     </ClCompile>
     <ClCompile Include="HandController.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TeleportDoor.cpp">
+      <Filter>Source Files\Turnable</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

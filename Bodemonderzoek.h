@@ -8,9 +8,8 @@
 #include "NodeLoader.h"
 #include "Turnable.h"
 #include "MainShader.h"
-#include <VrLib/tien/components/TerrainRenderer.h>
 #include "HandController.h"
-#include "VrLib/tien/Terrain.h"
+#include "Manhole.h"
 
 using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
@@ -22,7 +21,6 @@ public:
 	Bodemonderzoek();
 	~Bodemonderzoek();
 
-	vrlib::tien::Terrain* terrain;
 	vrlib::Texture* gridTexture;
 
 	virtual void init() override;
@@ -30,17 +28,16 @@ public:
 	virtual void preFrame(double frameTime, double totalTime) override;
 	virtual void latePreFrame() override;
 
-	void ground();
 	void loadScene();
 	NodeLoader * searchNode(std::string searchTerm);
 private:
 	bool showDebug;
-	std::vector<NodeLoader> nodes;
+	std::vector<Interactable> nodes;
 
 	HandController * rightHand;
 	HandController * leftHand;
 
-	Turnable * doorLeft;
-	Turnable * doorRight;
-	Turnable * manhole;
+	Interactable * doorLeft;
+	Interactable * doorRight;
+	Interactable * manhole;
 };

@@ -2,6 +2,7 @@
 #include <VrLib\HtcVive.h>
 #include <VrLib\tien\Tien.h>
 #include <VrLib\tien\Component.h>
+#include "Turnable.h"
 
 using namespace vrlib::tien;
 
@@ -23,8 +24,9 @@ public:
 	void update(float elapsedTime, vrlib::tien::Scene& scene) override;
 	void postUpdate(vrlib::tien::Scene& scene) override;
 
-	void drawRay(glm::mat4 view, glm::mat4 proj);
-	void checkTeleport(glm::mat4 data, Tien & engine);
+	glm::vec3 drawRay(glm::mat4 view, glm::mat4 proj);
+	void checkTeleport(glm::mat4 data, Tien & engine, glm::mat4 view, glm::mat4 proj);
+	void checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable> interactables);
 
 	void drawDeferredPass() override;
 	void drawForwardPass() override {};
@@ -37,4 +39,5 @@ public:
 	vrlib::tien::Node* teleportTarget = nullptr;
 	glm::vec3 teleportTargetPosition;
 	double lastTeleportTime = 0;
+	bool hasValidLocation = false;
 };

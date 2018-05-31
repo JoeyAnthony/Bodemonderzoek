@@ -1,7 +1,7 @@
 #pragma once
 #include "Turnable.h"
 
-class Manhole : public Turnable
+class Manhole : public Interactable
 {
 public:
 	Manhole(NodeLoader * manhole);

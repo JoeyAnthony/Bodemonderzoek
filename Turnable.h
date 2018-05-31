@@ -1,13 +1,19 @@
 #pragma once
 #include "NodeLoader.h"
 
-class Turnable
+enum Action {
+	TURN, TELEPORT
+};
+
+class Interactable
 {
 public:
-	Turnable();
-	~Turnable();
+	Interactable();
+	~Interactable();
 
 	NodeLoader * object;
+	Action action;
+
 	bool isOpen = false;
 
 	float radiant = 0.7f;
@@ -15,6 +21,7 @@ public:
 
 	virtual void Open();
 	virtual void Close();
-	void TestOpenClose();
+	virtual void Teleport(glm::mat4 data, Tien& engine);
+	void OpenClose();
 };
 
