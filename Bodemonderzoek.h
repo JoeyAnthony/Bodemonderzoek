@@ -8,7 +8,9 @@
 #include "NodeLoader.h"
 #include "Turnable.h"
 #include "MainShader.h"
+#include <VrLib/tien/components/TerrainRenderer.h>
 #include "HandController.h"
+#include "VrLib/tien/Terrain.h"
 
 using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
@@ -20,6 +22,7 @@ public:
 	Bodemonderzoek();
 	~Bodemonderzoek();
 
+	vrlib::tien::Terrain* terrain;
 	vrlib::Texture* gridTexture;
 
 	virtual void init() override;
