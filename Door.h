@@ -3,7 +3,7 @@
 
 enum openWay{RIGHT, LEFT};
 
-class Door : public Turnable
+class Door : public Interactable
 {
 public:
 	Door(NodeLoader * door, openWay dahway);

@@ -32,12 +32,12 @@ public:
 	NodeLoader * searchNode(std::string searchTerm);
 private:
 	bool showDebug;
-	std::vector<NodeLoader> nodes;
+	std::vector<Interactable> nodes;
 
 	HandController * rightHand;
 	HandController * leftHand;
 
-	Turnable * doorLeft;
-	Turnable * doorRight;
-	Turnable * manhole;
+	Interactable * doorLeft;
+	Interactable * doorRight;
+	Interactable * manhole;
 };

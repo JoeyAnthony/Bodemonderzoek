@@ -47,8 +47,8 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 	return rayTarget;
 }
 
-void HandController::drawDeferredPass() {
-
+void HandController::drawDeferredPass()
+{
 
 }
 
@@ -98,7 +98,8 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 		glm::vec3 closestHitPosition;
 		float closest = 100.0f;
 		hasValidLocation = false;
-		if (pointer.mDir.y < -0.2) {
+		if (pointer.mDir.y < -0.2)
+		{
 			hasValidLocation = true;
 			closestHitPosition = drawRay(view, proj);
 		}
@@ -143,4 +144,26 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 		}
 		
 	}
+}
+
+void HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable> interactables) {
+	teleportButton = controller.touchButton.getData();
+	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF) {
+		for (Interactable& inter: interactables) {
+			switch (inter.action) {
+			case TURN:
+				break;
+			case TELEPORT:
+				break;
+			default:
+				break;
+			}
+		}
+	}
+	if (teleportButton == vrlib::DigitalState::ON) {
+		for (Interactable& inter : interactables) {
+
+		}
+	}
+
 }

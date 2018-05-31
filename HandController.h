@@ -2,6 +2,7 @@
 #include <VrLib\HtcVive.h>
 #include <VrLib\tien\Tien.h>
 #include <VrLib\tien\Component.h>
+#include "Turnable.h"
 
 using namespace vrlib::tien;
 
@@ -25,6 +26,7 @@ public:
 
 	glm::vec3 drawRay(glm::mat4 view, glm::mat4 proj);
 	void checkTeleport(glm::mat4 data, Tien & engine, glm::mat4 view, glm::mat4 proj);
+	void checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable> interactables);
 
 	void drawDeferredPass() override;
 	void drawForwardPass() override {};

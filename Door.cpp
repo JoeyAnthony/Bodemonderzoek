@@ -15,6 +15,7 @@ Door::Door(NodeLoader * door, openWay dahway)
 	}
 
 	object->rotation.w = cos(object->rotation.y);
+	action = Action::TURN;
 }
 
 
