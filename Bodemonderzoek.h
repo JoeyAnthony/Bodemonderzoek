@@ -30,6 +30,7 @@ public:
 	virtual void preFrame(double frameTime, double totalTime) override;
 	virtual void latePreFrame() override;
 
+	void ground();
 	void loadScene();
 	NodeLoader * searchNode(std::string searchTerm);
 private:
