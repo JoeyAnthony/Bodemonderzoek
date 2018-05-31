@@ -37,6 +37,7 @@ public:
 
 	vrlib::DigitalState teleportButton;
 	vrlib::tien::Node* teleportTarget = nullptr;
+	Interactable* actionTarget = nullptr;
 	glm::vec3 teleportTargetPosition;
 	double lastTeleportTime = 0;
 	bool hasValidLocation = false;

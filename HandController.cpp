@@ -35,7 +35,8 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 	glm::vec3 rayDir = glm::vec3(rayFront - rayOrigin);
 	//glm::vec3 rayDir = glm::vec3(glm::vec4(glm::normalize(rayFront - rayOrigin), 1.f) * glm::rotate(glm::mat4(), -45.f, glm::vec3(1, 0, 0)));
 	float length;
-	glm::intersectRayPlane(rayOrigin, rayDir, glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), length);
+	if(hasValidLocation)glm::intersectRayPlane(rayOrigin, rayDir, glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), length);
+	else length = 10;
 
 	glm::vec3 rayTarget{ rayOrigin + rayDir * length};
 
@@ -128,9 +129,9 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 			{
 				teleportTarget->transform->position = closestHitPosition;
 				teleportTargetPosition = closestHitPosition;
-			}*/
-			//else
-			//{
+			}
+			else
+			{*/
 			glm::vec3 diff = closestHitPosition - pointer.mOrigin;
 			float length = glm::length(diff);
 			diff = glm::normalize(diff);
@@ -147,20 +148,22 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 }
 
 void HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable> interactables) {
-	teleportButton = controller.touchButton.getData();
-	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF) {
-		for (Interactable& inter: interactables) {
-			switch (inter.action) {
-			case TURN:
-				break;
-			case TELEPORT:
-				break;
-			default:
-				break;
-			}
+	vrlib::DigitalState button = controller.gripButton.getData();
+
+	if (button == vrlib::DigitalState::TOGGLE_OFF && actionTarget) {
+		switch (actionTarget->action) {
+		case TURN:
+			break;
+		case TELEPORT:
+			break;
+		default:
+			break;
 		}
+		actionTarget = nullptr;
 	}
-	if (teleportButton == vrlib::DigitalState::ON) {
+
+	if (button == vrlib::DigitalState::ON) {
+		drawRay(view, proj);
 		for (Interactable& inter : interactables) {
 
 		}
