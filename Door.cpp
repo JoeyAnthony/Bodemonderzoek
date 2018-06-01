@@ -31,12 +31,14 @@ void Door::Open()
 		object->rotation.y -= step;
 		if (object->rotation.y <= 0.0) {
 			isOpen = true;
+			isDone = true;
 		}
 		break;
 	case LEFT:
 		object->rotation.y += step;
 		if (object->rotation.y >= 0.0) {
 			isOpen = true;
+			isDone = true;
 		}
 		break;
 	}
@@ -54,12 +56,14 @@ void Door::Close()
 			object->rotation.y += step;
 			if (object->rotation.y >= radiant) {
 				isOpen = false;
+				isDone = true;
 			}
 			break;
 		case LEFT:
 			object->rotation.y -= step;
 			if (object->rotation.y <= -radiant) {
 				isOpen = false;
+				isDone = true;
 			}
 			break;
 	}

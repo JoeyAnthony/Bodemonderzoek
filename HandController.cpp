@@ -35,7 +35,8 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 	glm::vec3 rayDir = glm::vec3(rayFront - rayOrigin);
 	//glm::vec3 rayDir = glm::vec3(glm::vec4(glm::normalize(rayFront - rayOrigin), 1.f) * glm::rotate(glm::mat4(), -45.f, glm::vec3(1, 0, 0)));
 	float length;
-	glm::intersectRayPlane(rayOrigin, rayDir, glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), length);
+	if(hasValidLocation)glm::intersectRayPlane(rayOrigin, rayDir, glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), length);
+	else length = 10;
 
 	glm::vec3 rayTarget{ rayOrigin + rayDir * length};
 
@@ -104,39 +105,14 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 			closestHitPosition = drawRay(view, proj);
 		}
 
-
-		/*engine.scene.castRay(pointer, [&, this](vrlib::tien::Node* node, float hitFraction, const glm::vec3 &hitPosition, const glm::vec3 &hitNormal)
-		{
-			bool collides = false;
-			this->node->fortree([&collides, node](vrlib::tien::Node* n) { collides |= node == n; });
-			if (collides)
-				return true;
-
-			if (hitFraction < closest && hitFraction > 0)
-			{
-				closest = hitFraction;
-				closestClickedNode = node;
-				closestHitPosition = hitPosition;
-			}
-			return true;
-		}, false);
-		*/
 		if (hasValidLocation)
 		{
 			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = true;
-			/*if (glm::abs(closestHitPosition.y) < 2.0f)
-			{
-				teleportTarget->transform->position = closestHitPosition;
-				teleportTargetPosition = closestHitPosition;
-			}*/
-			//else
-			//{
 			glm::vec3 diff = closestHitPosition - pointer.mOrigin;
 			float length = glm::length(diff);
 			diff = glm::normalize(diff);
 			teleportTargetPosition = pointer.mOrigin + length * diff;
 			teleportTarget->transform->position = glm::vec3(teleportTargetPosition.x, 0, teleportTargetPosition.z);
-			//}
 		}
 		else {
 			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
@@ -146,24 +122,39 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 	}
 }
 
-void HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable> interactables) {
-	teleportButton = controller.touchButton.getData();
-	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF) {
-		for (Interactable& inter: interactables) {
-			switch (inter.action) {
-			case TURN:
-				break;
-			case TELEPORT:
-				break;
-			default:
-				break;
+void HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables) {
+	vrlib::DigitalState button = controller.gripButton.getData();
+
+	if (actionTarget) {
+		switch (actionTarget->action) {
+		case TURN:
+			actionTarget->OpenClose();
+			break;
+		case TELEPORT:
+			actionTarget->Teleport(data, engine);
+			break;
+		default:
+			break;
+		}
+
+		if (actionTarget) {
+			if (actionTarget->isDone) {
+				actionTarget->isDone = false;
+				actionTarget = nullptr;
 			}
 		}
 	}
-	if (teleportButton == vrlib::DigitalState::ON) {
-		for (Interactable& inter : interactables) {
+	if (button == vrlib::DigitalState::ON) {
+		drawRay(view, proj);
+	}
 
+	if (button == vrlib::DigitalState::TOGGLE_OFF) {
+	  for (Interactable* inter : interactables) {
+			//TODO: make it select the node the ray intersects with
+			actionTarget = inter;
+			actionTarget->isDone = false;
 		}
 	}
+
 
 }
