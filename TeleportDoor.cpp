@@ -24,4 +24,5 @@ void TeleportDoor::Teleport(glm::mat4 data, Tien& engine)
 
 	engine.scene.cameraNode->transform->position = glm::vec3(target.x, 0, target.z);
 	glm::vec3 position((data * glm::vec4(0, 0, 0, 1)) + (engine.scene.cameraNode->transform->globalTransform * glm::vec4(0, 0, 0, 1)));
+	isDone = true;
 }

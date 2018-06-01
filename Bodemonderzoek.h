@@ -10,6 +10,7 @@
 #include "MainShader.h"
 #include "HandController.h"
 #include "Manhole.h"
+#include "TeleportDoor.h"
 
 using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
@@ -32,12 +33,8 @@ public:
 	NodeLoader * searchNode(std::string searchTerm);
 private:
 	bool showDebug;
-	std::vector<Interactable> nodes;
+	std::vector<Interactable*> nodes;
 
 	HandController * rightHand;
 	HandController * leftHand;
-
-	Interactable * doorLeft;
-	Interactable * doorRight;
-	Interactable * manhole;
 };
