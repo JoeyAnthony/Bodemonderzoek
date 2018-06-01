@@ -43,8 +43,6 @@ void Door::Open()
 		break;
 	}
 	object->rotation.w = cos(object->rotation.y);
-	object->position.z = sin(-object->rotation.x);
-	object->position.x = cos(object->rotation.x);
 
 }
 
@@ -68,6 +66,4 @@ void Door::Close()
 			break;
 	}
 	object->rotation.w = cos(object->rotation.y);
-	object->position.z = sin(-object->rotation.x);
-	object->position.x = cos(object->rotation.x);
 }

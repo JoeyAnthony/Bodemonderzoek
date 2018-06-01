@@ -114,7 +114,8 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 			teleportTargetPosition = pointer.mOrigin + length * diff;
 			teleportTarget->transform->position = glm::vec3(teleportTargetPosition.x, 0, teleportTargetPosition.z);
 		}
-		else {
+		else 
+		{
 			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
 			teleportTarget->transform->position = glm::vec3(0, 0, 0);
 		}
