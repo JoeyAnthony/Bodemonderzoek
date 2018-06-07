@@ -28,6 +28,7 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 	glDisable(GL_BLEND);
 	glLineWidth(10.0f);
 
+
 	glm::vec3 rayOrigin{ node->transform->transform * glm::vec4(0, 0, 0, 1) };
 	//glm::mat4 rotmat = glm::rotate(node->transform->transform, glm::radians(-60.f), glm::vec3(1, 0, 0));
 	//glm::vec3 rayFront{rotmat * glm::vec4(0, 0, -1, 1)};
@@ -40,11 +41,13 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 
 	glm::vec3 rayTarget{ rayOrigin + rayDir * length};
 
+	
 	glBegin(GL_LINES);
 	glColor3f(0, 0, 1);
 	glVertex3fv(glm::value_ptr(rayOrigin));
 	glVertex3fv(glm::value_ptr(rayTarget));
 	glEnd();
+	
 	return rayTarget;
 }
 
@@ -71,6 +74,7 @@ void HandController::RayRenderer::frameSetup(const glm::mat4 & projectionMatrix,
 
 void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj)
 {
+	
 	teleportButton = controller.touchButton.getData();
 	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF && hasValidLocation)
 	{
@@ -89,20 +93,17 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 
 	if (teleportButton == vrlib::DigitalState::ON) 
 	{
-		std::vector<Node *> plane = engine.scene.findNodesWithName("plane");
-
+		closestHitPosition = drawRay(view, proj);
 		glm::mat4 wandMat = controller.transform.getData();
 		vrlib::math::Ray pointer;
 		pointer.mOrigin = glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 0, 1));
 		pointer.mDir = glm::normalize(pointer.mOrigin - glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 1, 1)));
 		vrlib::tien::Node* closestClickedNode = nullptr;
-		glm::vec3 closestHitPosition;
 		float closest = 100.0f;
 		hasValidLocation = false;
 		if (pointer.mDir.y < -0.2)
 		{
 			hasValidLocation = true;
-			closestHitPosition = drawRay(view, proj);
 		}
 
 		if (hasValidLocation)
@@ -119,15 +120,16 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
 			teleportTarget->transform->position = glm::vec3(0, 0, 0);
 		}
-		
 	}
 }
 
-void HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables) {
+bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables) {
 	vrlib::DigitalState button = controller.gripButton.getData();
 
-	if (actionTarget) {
-		switch (actionTarget->action) {
+	if (actionTarget && objectIsBusy) 
+	{
+		switch (actionTarget->action) 
+		{
 		case TURN:
 			actionTarget->OpenClose();
 			break;
@@ -138,24 +140,46 @@ void HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::m
 			break;
 		}
 
-		if (actionTarget) {
-			if (actionTarget->isDone) {
-				actionTarget->isDone = false;
-				actionTarget = nullptr;
-			}
+		if (actionTarget->isDone) {
+			objectIsBusy = false;
+			actionTarget->isDone = false;
+			actionTarget = nullptr;
 		}
 	}
-	if (button == vrlib::DigitalState::ON) {
-		drawRay(view, proj);
+
+	if (button == vrlib::DigitalState::ON && !actionTarget) {
+		//TODO: make it select the node the ray intersects with
+		glm::mat4 wandMat = controller.transform.getData();
+		vrlib::math::Ray pointer;
+		pointer.mOrigin = glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 0, 1));
+		pointer.mDir = glm::normalize(pointer.mOrigin - glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 1, 1)));
+
+		glm::vec3 hitPosition = glm::vec3(INT_MAX);
+		float closest = 10.0f;
+		engine.scene.castRay(pointer, [&, this](vrlib::tien::Node* node, float hitFraction, const glm::vec3 &hitPos, const glm::vec3 &hitNormal)
+		{
+			if (hitFraction < closest && hitFraction > 0)
+			{
+				for (Interactable* inter : interactables) {
+					if (node == inter->object->node)
+					{
+						actionTarget = inter;
+						return true;
+					}
+				}
+			}
+			return true;
+		}, false);
+		
 	}
 
 	if (button == vrlib::DigitalState::TOGGLE_OFF) {
-	  for (Interactable* inter : interactables) {
-			//TODO: make it select the node the ray intersects with
-			actionTarget = inter;
+		if (actionTarget && !objectIsBusy) {
 			actionTarget->isDone = false;
+			objectIsBusy = true;
+			teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
+			return true;
 		}
 	}
-
-
+	return false;
 }

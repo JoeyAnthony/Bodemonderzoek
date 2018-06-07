@@ -26,7 +26,7 @@ public:
 
 	glm::vec3 drawRay(glm::mat4 view, glm::mat4 proj);
 	void checkTeleport(glm::mat4 data, Tien & engine, glm::mat4 view, glm::mat4 proj);
-	void checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables);
+	bool checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables);
 
 	void drawDeferredPass() override;
 	void drawForwardPass() override {};
@@ -39,6 +39,9 @@ public:
 	vrlib::tien::Node* teleportTarget = nullptr;
 	Interactable* actionTarget = nullptr;
 	glm::vec3 teleportTargetPosition;
+	glm::mat4 startPosition;
+	glm::vec3 closestHitPosition;
 	double lastTeleportTime = 0;
 	bool hasValidLocation = false;
+	bool objectIsBusy = false;
 };
