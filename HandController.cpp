@@ -18,7 +18,6 @@ void HandController::postUpdate(Scene & scene)
 
 glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 {
-	/*
 	glMatrixMode(GL_PROJECTION);
 	glLoadMatrixf(glm::value_ptr(proj));
 	glMatrixMode(GL_MODELVIEW);
@@ -28,7 +27,6 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 	glColor4f(1, 0, 0, 1);
 	glDisable(GL_BLEND);
 	glLineWidth(10.0f);
-	*/
 
 
 	glm::vec3 rayOrigin{ node->transform->transform * glm::vec4(0, 0, 0, 1) };
@@ -43,13 +41,13 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 
 	glm::vec3 rayTarget{ rayOrigin + rayDir * length};
 
-	/*
+	
 	glBegin(GL_LINES);
 	glColor3f(0, 0, 1);
 	glVertex3fv(glm::value_ptr(rayOrigin));
 	glVertex3fv(glm::value_ptr(rayTarget));
 	glEnd();
-	*/
+	
 	return rayTarget;
 }
 
@@ -76,6 +74,7 @@ void HandController::RayRenderer::frameSetup(const glm::mat4 & projectionMatrix,
 
 void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj)
 {
+	
 	teleportButton = controller.touchButton.getData();
 	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF && hasValidLocation)
 	{
@@ -94,18 +93,17 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 
 	if (teleportButton == vrlib::DigitalState::ON) 
 	{
+		closestHitPosition = drawRay(view, proj);
 		glm::mat4 wandMat = controller.transform.getData();
 		vrlib::math::Ray pointer;
 		pointer.mOrigin = glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 0, 1));
 		pointer.mDir = glm::normalize(pointer.mOrigin - glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 1, 1)));
 		vrlib::tien::Node* closestClickedNode = nullptr;
-		glm::vec3 closestHitPosition;
 		float closest = 100.0f;
 		hasValidLocation = false;
 		if (pointer.mDir.y < -0.2)
 		{
 			hasValidLocation = true;
-			closestHitPosition = drawRay(view, proj);
 		}
 
 		if (hasValidLocation)
@@ -150,8 +148,7 @@ bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::m
 	}
 
 	if (button == vrlib::DigitalState::ON && !actionTarget) {
-		glm::vec3 direction = drawRay(view, proj);
-			//TODO: make it select the node the ray intersects with
+		//TODO: make it select the node the ray intersects with
 		glm::mat4 wandMat = controller.transform.getData();
 		vrlib::math::Ray pointer;
 		pointer.mOrigin = glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 0, 1));
