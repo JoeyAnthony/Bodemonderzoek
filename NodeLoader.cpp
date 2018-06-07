@@ -8,6 +8,7 @@ NodeLoader::NodeLoader(std::string path, std::string name, glm::vec3 position)
 	this->name = name;
 
 	this->position = position;
+	originPosition = position;
 	rotation = glm::quat(0,0,0,0);
 	scale = glm::vec3(1,1,1);
 }
