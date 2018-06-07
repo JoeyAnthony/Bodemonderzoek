@@ -10,6 +10,7 @@
 #include "MainShader.h"
 #include "HandController.h"
 #include "Manhole.h"
+#include "TeleportDoor.h"
 #include "VrLib/tien/Terrain.h"
 
 using namespace vrlib::tien;
