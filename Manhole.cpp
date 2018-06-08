@@ -5,7 +5,7 @@
 Manhole::Manhole(NodeLoader * manhole)
 {
 	object = manhole;
-	object->scale = glm::vec3(0.001,0.001,0.001);
+	//object->scale = glm::vec3(0.001,0.001,0.001);
 	action = Action::TURN;
 }
 
