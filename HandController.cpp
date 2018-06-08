@@ -18,11 +18,12 @@ void HandController::postUpdate(Scene & scene)
 
 glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 {
+	/*
 	glUseProgram(0);
 	glDisable(GL_TEXTURE_2D);
 	glColor4f(1, 0, 0, 1);
 	glDisable(GL_BLEND);
-	glLineWidth(10.0f);
+	glLineWidth(10.0f);*/
 
 	startPosition = node->transform->transform;
 	glm::vec3 rayOrigin{ node->transform->transform * glm::vec4(0, 0, 0, 1) };
@@ -41,11 +42,12 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 
 	glm::vec3 rayTarget{ rayOrigin + rayDir * length};
 	
+	/*
 	glBegin(GL_LINES);
 	glColor3f(0, 0, 1);
 	glVertex3fv(glm::value_ptr(rayOrigin));
 	glVertex3fv(glm::value_ptr(rayTarget));
-	glEnd();
+	glEnd();*/
 	
 	return rayTarget;
 }
