@@ -11195,7 +11195,7 @@
                         1
                     ]
                 },
-                "diffuse": "./data/Bodemonderzoek/textures/GroundTiles/dirt.png"
+                "diffuse": "./data/Bodemonderzoek/textures/GroundTiles/Tank.png"
             },
             "vertices": [
                 {
@@ -13192,136 +13192,6 @@
                 "components": [
                     {
                         "position": [
-                            -7.90840005874634,
-                            0.0,
-                            -36.1568984985352
-                        ],
-                        "rotation": [
-                            0.0,
-                            0.0,
-                            0.0,
-                            1
-                        ],
-                        "scale": [
-                            1,
-                            1,
-                            1
-                        ],
-                        "type": "transform"
-                    },
-                    {
-                        "castShadow": true,
-                        "cullBackFaces": true,
-                        "file": "./data/Models/Decoration/Tables/TI-Table/TI-Table.dae",
-                        "materialoverrides": [
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null,
-                            null
-                        ],
-                        "type": "modelrenderer"
-                    }
-                ],
-                "name": "TI-Table.dae",
-                "uuid": "c5b9eb9e-e11f-419b-b8f4-2f4e4bf8c4c3"
-            },
-            {
-                "components": [
-                    {
-                        "position": [
                             -9.80900001525879,
                             0.0,
                             -30.3586006164551
@@ -13788,7 +13658,7 @@
                         "type": "meshrenderer"
                     }
                 ],
-                "name": "plane",
+                "name": "plane2",
                 "uuid": "e3d04763-b706-437b-9cdc-e09b08ba2169"
             },
             {
@@ -13860,10 +13730,10 @@
                             1
                         ],
                         "rotation": [
+                            0.0,
                             0.70710676908493,
-                            -3.09086196637054e-08,
-                            -0.70710676908493,
-                            -3.09086196637054e-08
+                            0.0,
+                            0.70710676908493
                         ],
                         "scale": [
                             0.00999999977648258,
@@ -13890,10 +13760,10 @@
                             -1
                         ],
                         "rotation": [
-                            -0.00617059227079153,
-                            0.707079827785492,
-                            0.00617059227079153,
-                            0.707079827785492
+                            -0.70710676908493,
+                            5.33850759154575e-08,
+                            0.70710676908493,
+                            5.33850759154575e-08
                         ],
                         "scale": [
                             0.00999999977648258,
@@ -13949,9 +13819,9 @@
                 "components": [
                     {
                         "position": [
-                            -8.10449981689453,
+                            -3.10450005531311,
                             0.0199999995529652,
-                            1.5217000246048
+                            -26.5216999053955
                         ],
                         "rotation": [
                             0.0,
@@ -14289,9 +14159,9 @@
                 "components": [
                     {
                         "position": [
-                            -8.11929988861084,
+                            -2.89299988746643,
                             0.119999997317791,
-                            1.51479995250702
+                            -26.514799118042
                         ],
                         "rotation": [
                             0.0,
@@ -14323,9 +14193,9 @@
                 "components": [
                     {
                         "position": [
-                            -8.19174957275391,
+                            -3.19175004959106,
                             0.119999997317791,
-                            1.62492001056671
+                            -26.6249008178711
                         ],
                         "rotation": [
                             0.0,
@@ -14357,9 +14227,9 @@
                 "components": [
                     {
                         "position": [
-                            -8.22399997711182,
+                            -3.22399997711182,
                             0.119999997317791,
-                            1.3118200302124
+                            -26.3118000030518
                         ],
                         "rotation": [
                             0.0,
@@ -14454,6 +14324,403 @@
                 ],
                 "name": "frame.fbx",
                 "uuid": "d9b7c82f-381a-4911-b688-4d9fb060dad9"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -19,
+                            1.00999999046326,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            0.300000011920929,
+                            1,
+                            2
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "mesh": "7ff21d02-c567-478b-8ba6-116598794efd",
+                        "type": "meshrenderer"
+                    }
+                ],
+                "name": "plane",
+                "uuid": "f7e22cf7-1f5f-4c8d-ba88-430b3025e4a1"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -21,
+                            1.00999999046326,
+                            0.0
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            0.300000011920929,
+                            1,
+                            2
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "mesh": "7ff21d02-c567-478b-8ba6-116598794efd",
+                        "type": "meshrenderer"
+                    }
+                ],
+                "name": "plane",
+                "uuid": "b51a2668-f0ea-48d6-9ab8-4ba39cbdd157"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -20,
+                            1.00999999046326,
+                            -1
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            0.300000011920929,
+                            1,
+                            2
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "mesh": "7ff21d02-c567-478b-8ba6-116598794efd",
+                        "type": "meshrenderer"
+                    }
+                ],
+                "name": "plane",
+                "uuid": "f497d6c0-184d-4280-b6ec-2b4d928c8dbf"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -20,
+                            1.00999999046326,
+                            1
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.70710676908493,
+                            0.0,
+                            0.70710676908493
+                        ],
+                        "scale": [
+                            0.300000011920929,
+                            1,
+                            2
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "mesh": "7ff21d02-c567-478b-8ba6-116598794efd",
+                        "type": "meshrenderer"
+                    }
+                ],
+                "name": "plane",
+                "uuid": "bc0945aa-98d6-4e9d-83a1-12037edde63b"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            5.70037984848022,
+                            0.0,
+                            -28.417200088501
+                        ],
+                        "rotation": [
+                            0.0,
+                            -0.258819043636322,
+                            0.0,
+                            0.965925812721252
+                        ],
+                        "scale": [
+                            0.00999999977648258,
+                            0.00999999977648258,
+                            0.00999999977648258
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/models/Vehicles/fork heftruck/fork heftruck.fbx",
+                        "materialoverrides": [
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null,
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "fork heftruck.fbx",
+                "uuid": "d13edd1e-6327-480a-adfd-4e326bce2f30"
             }
         ],
         "name": "Root",
