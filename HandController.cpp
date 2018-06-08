@@ -32,8 +32,12 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 	glm::vec3 rayDir = glm::vec3(rayFront - rayOrigin);
 	//glm::vec3 rayDir = glm::vec3(glm::vec4(glm::normalize(rayFront - rayOrigin), 1.f) * glm::rotate(glm::mat4(), -45.f, glm::vec3(1, 0, 0)));
 	float length;
-	if(hasValidLocation)glm::intersectRayPlane(rayOrigin, rayDir, glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), length);
-	else length = 10;
+	if (hasValidLocation) {
+		glm::intersectRayPlane(rayOrigin, rayDir, glm::vec3(0, 0, 0), glm::vec3(0, 1, 0), length);
+	}
+	else {
+		length = 10;
+	}
 
 	glm::vec3 rayTarget{ rayOrigin + rayDir * length};
 	
