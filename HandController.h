@@ -39,7 +39,6 @@ public:
 	vrlib::tien::Node* teleportTarget = nullptr;
 	Interactable* actionTarget = nullptr;
 	glm::vec3 teleportTargetPosition;
-	glm::mat4 startPosition;
 	glm::vec3 closestHitPosition;
 	double lastTeleportTime = 0;
 	bool hasValidLocation = false;

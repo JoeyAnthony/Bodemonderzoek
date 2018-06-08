@@ -25,7 +25,6 @@ glm::vec3 HandController::drawRay(glm::mat4 view, glm::mat4 proj)
 	glDisable(GL_BLEND);
 	glLineWidth(10.0f);*/
 
-	startPosition = node->transform->transform;
 	glm::vec3 rayOrigin{ node->transform->transform * glm::vec4(0, 0, 0, 1) };
 	//glm::mat4 rotmat = glm::rotate(node->transform->transform, glm::radians(-60.f), glm::vec3(1, 0, 0));
 	//glm::vec3 rayFront{rotmat * glm::vec4(0, 0, -1, 1)};
@@ -75,8 +74,9 @@ void HandController::RayRenderer::frameSetup(const glm::mat4 & projectionMatrix,
 
 void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj)
 {
-	
 	teleportButton = controller.touchButton.getData();
+
+	//Teleports to the location if the target is valid
 	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF && hasValidLocation)
 	{
 		glm::vec3 target = teleportTarget->transform->getGlobalPosition();
@@ -91,6 +91,7 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 		teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
 	}
 
+	//Casts a ray and draws a teleport target for the teleportable location
 	if (teleportButton == vrlib::DigitalState::ON) 
 	{
 		closestHitPosition = drawRay(view, proj);
@@ -123,10 +124,13 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 	}
 }
 
-
+/*
+Checks if the teleport button has been pressed, and if the ray intersects with a interactable object.
+*/
 bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables) {
 	vrlib::DigitalState button = controller.gripButton.getData();
 
+	//If a interactable object is selected, the code will run its leading method
 	if (actionTarget && objectIsBusy) 
 	{
 		switch (actionTarget->action) 
@@ -148,6 +152,7 @@ bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::m
 		}
 	}
 
+	//Checks for selectable interactable objects
 	if (button == vrlib::DigitalState::ON && !actionTarget) {
 		glm::mat4 wandMat = controller.transform.getData();
 		vrlib::math::Ray pointer;
@@ -170,9 +175,9 @@ bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::m
 			}
 			return true;
 		}, false);
-		
 	}
 
+	//If a interactable object is selected, this code goes off
 	if (button == vrlib::DigitalState::TOGGLE_OFF) {
 		if (actionTarget && !objectIsBusy) {
 			actionTarget->isDone = false;
