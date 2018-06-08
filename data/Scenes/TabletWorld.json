@@ -13059,7 +13059,7 @@
                 "components": [
                     {
                         "position": [
-                            3.3145899772644,
+                            0.314590007066727,
                             0.0,
                             -124.901000976563
                         ],
@@ -13910,6 +13910,550 @@
                 ],
                 "name": "cube",
                 "uuid": "9d35e428-9500-4551-a1d5-395d3bd9b732"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.7811603546143,
+                            0.0199999995529652,
+                            -29.3577308654785
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/pallet/pallet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "pallet.fbx",
+                "uuid": "244b0d7f-c7e4-4246-ad67-a16229409986"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -8.10449981689453,
+                            0.0199999995529652,
+                            1.5217000246048
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/pallet/pallet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "pallet.fbx",
+                "uuid": "f78e75a1-9f0c-4c66-aa26-03603cec41c3"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.2212600708008,
+                            0.0199999995529652,
+                            -34.2663612365723
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/pallet/pallet.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "pallet.fbx",
+                "uuid": "1882d58f-486a-4ebf-bb7d-f0493c9685f5"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.3542003631592,
+                            0.119999997317791,
+                            -34.189998626709
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrelMetal/barrelMetal.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal.fbx",
+                "uuid": "656e485a-6696-4ba0-b2e4-8b5f0037276a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -14,
+                            0.0,
+                            -25.6000003814697
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrelMetal/barrelMetal.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal.fbx",
+                "uuid": "e1c79212-dc2a-4c8f-8fc3-899e7e00ae8d"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.0492000579834,
+                            0.119999997317791,
+                            -34
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrelMetal/barrelMetal.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal.fbx",
+                "uuid": "0363517c-1e08-4a50-b559-2808ce1b1510"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -14.84850025177,
+                            0.0,
+                            -26.8514003753662
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/carbonDisulfide/carbonDisulfide_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "carbonDisulfide_L.fbx",
+                "uuid": "c3fa7d64-3c73-439e-a0b5-43f902b895b1"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -13.2451000213623,
+                            0.0,
+                            -27.7908992767334
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/dibutylPhthalate/dibutylPhthalate_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "dibutylPhthalate_L.fbx",
+                "uuid": "7e5ef199-0659-4c0a-9634-0070f693a253"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -19.6107997894287,
+                            -0.100000001490116,
+                            -0.200898006558418
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/naphthalene/naphthalene_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "naphthalene_L.fbx",
+                "uuid": "3b89f666-f96a-4120-aaab-83aef41c22e4"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.6209001541138,
+                            0.119999997317791,
+                            -29.2112007141113
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrelMetal_L/barrelMetal_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal_L.fbx",
+                "uuid": "89fc34a0-5886-474e-aac8-a268da4bd9ce"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -11.9787998199463,
+                            0.119999997317791,
+                            -29.607400894165
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/barrelMetal_L/barrelMetal_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "barrelMetal_L.fbx",
+                "uuid": "5f67c36a-82e0-4e0e-b150-32be3e68bde6"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -8.11929988861084,
+                            0.119999997317791,
+                            1.51479995250702
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/gasCylinder_L/gasCylinder_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "gasCylinder_L.fbx",
+                "uuid": "4353ac3e-7e5b-4ff9-8e5c-00a2f11f9c6c"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -8.19174957275391,
+                            0.119999997317791,
+                            1.62492001056671
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/gasCylinder_L/gasCylinder_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "gasCylinder_L.fbx",
+                "uuid": "05dfa382-0e0d-4552-9a2c-f27dae35f5a6"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -8.22399997711182,
+                            0.119999997317791,
+                            1.3118200302124
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/gasCylinder_L/gasCylinder_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "gasCylinder_L.fbx",
+                "uuid": "309a34dd-3729-4ab6-b718-cdc0c30eac4e"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -19.5578002929688,
+                            -0.300000011920929,
+                            0.416240990161896
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.258819043636322,
+                            0.965925812721252
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/naphthalene/naphthalene_L.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "naphthalene_L.fbx",
+                "uuid": "c6297e9c-c8c8-4a1e-9cb0-476017e2805a"
+            },
+            {
+                "components": [
+                    {
+                        "position": [
+                            -3.18633818626404,
+                            0.0,
+                            -0.292664527893066
+                        ],
+                        "rotation": [
+                            0.0,
+                            0.0,
+                            0.0,
+                            1
+                        ],
+                        "scale": [
+                            1,
+                            1,
+                            1
+                        ],
+                        "type": "transform"
+                    },
+                    {
+                        "castShadow": true,
+                        "cullBackFaces": true,
+                        "file": "./data/Bodemonderzoek/models/frame/frame.fbx",
+                        "materialoverrides": [
+                            null
+                        ],
+                        "type": "modelrenderer"
+                    }
+                ],
+                "name": "frame.fbx",
+                "uuid": "d9b7c82f-381a-4911-b688-4d9fb060dad9"
             }
         ],
         "name": "Root",
