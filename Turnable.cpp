@@ -2,23 +2,27 @@
 #include "Turnable.h"
 
 
-Turnable::Turnable()
+Interactable::Interactable()
 {
 }
 
-Turnable::~Turnable()
+Interactable::~Interactable()
 {
 }
 
-void Turnable::Open()
+void Interactable::Open()
 {
 }
 
-void Turnable::Close()
+void Interactable::Close()
 {
 }
 
-void Turnable::TestOpenClose()
+void Interactable::Teleport(glm::mat4 data, Tien& engine)
+{
+}
+
+void Interactable::OpenClose()
 {
 	if (isOpen) {
 		Close();

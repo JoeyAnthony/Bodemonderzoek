@@ -15,6 +15,7 @@ Door::Door(NodeLoader * door, openWay dahway)
 	}
 
 	object->rotation.w = cos(object->rotation.y);
+	action = Action::TURN;
 }
 
 
@@ -30,18 +31,18 @@ void Door::Open()
 		object->rotation.y -= step;
 		if (object->rotation.y <= 0.0) {
 			isOpen = true;
+			isDone = true;
 		}
 		break;
 	case LEFT:
 		object->rotation.y += step;
 		if (object->rotation.y >= 0.0) {
 			isOpen = true;
+			isDone = true;
 		}
 		break;
 	}
 	object->rotation.w = cos(object->rotation.y);
-	object->position.z = sin(-object->rotation.x);
-	object->position.x = cos(object->rotation.x);
 
 }
 
@@ -53,16 +54,16 @@ void Door::Close()
 			object->rotation.y += step;
 			if (object->rotation.y >= radiant) {
 				isOpen = false;
+				isDone = true;
 			}
 			break;
 		case LEFT:
 			object->rotation.y -= step;
 			if (object->rotation.y <= -radiant) {
 				isOpen = false;
+				isDone = true;
 			}
 			break;
 	}
 	object->rotation.w = cos(object->rotation.y);
-	object->position.z = sin(-object->rotation.x);
-	object->position.x = cos(object->rotation.x);
 }

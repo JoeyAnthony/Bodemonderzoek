@@ -7,7 +7,7 @@ class MainShader
 {
 public:
 	virtual vrlib::gl::Shader<Uniforms>* mainShader();
-	virtual void mainDraw(const glm::mat4 &projectionMatrix, const glm::mat4 &modelViewMatrix);
+	virtual void mainDraw(const glm::mat4 &projectionMatrix, const glm::mat4 &modelViewMatrix, int positionX, int positionY);
 
 	vrlib::gl::Shader<Uniforms>* shader;
 

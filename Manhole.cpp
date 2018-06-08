@@ -5,7 +5,8 @@
 Manhole::Manhole(NodeLoader * manhole)
 {
 	object = manhole;
-	object->scale = glm::vec3(0.001,0.001,0.001);
+	//object->scale = glm::vec3(0.001,0.001,0.001);
+	action = Action::TURN;
 }
 
 
@@ -19,11 +20,11 @@ void Manhole::Open()
 	object->rotation.x -= step;
 	object->rotation.w = cos(object->rotation.x);
 
-	object->position.y = sin(-object->rotation.x);
-	object->position.z = cos(object->rotation.x);
+	object->position.y = sin(-object->rotation.x) + object->originPosition.y;
 
 	if (object->rotation.x <= -radiant) {
 		isOpen = true;
+		isDone = true;
 	}
 
 }
@@ -35,9 +36,9 @@ void Manhole::Close()
 	object->rotation.w = cos(object->rotation.x);
 
 	object->position.y = sin(-object->rotation.x);
-	object->position.z = cos(object->rotation.x);
 
 	if (object->rotation.x >= 0.0) {
 		isOpen = false;
+		isDone = true;
 	}
 }

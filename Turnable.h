@@ -1,20 +1,28 @@
 #pragma once
 #include "NodeLoader.h"
 
-class Turnable
+enum Action {
+	TURN, TELEPORT
+};
+
+class Interactable
 {
 public:
-	Turnable();
-	~Turnable();
+	Interactable();
+	~Interactable();
 
 	NodeLoader * object;
-	bool isOpen = false;
+	Action action;
 
-	float radiant = 0.7;
-	float step = 0.01;
+	bool isOpen = false;
+	bool isDone = false;
+
+	float radiant = 0.7f;
+	float step = 0.01f;
 
 	virtual void Open();
 	virtual void Close();
-	void TestOpenClose();
+	virtual void Teleport(glm::mat4 data, Tien& engine);
+	void OpenClose();
 };
 
