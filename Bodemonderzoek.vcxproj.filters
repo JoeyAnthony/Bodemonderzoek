@@ -54,6 +54,30 @@
     <ClInclude Include="TeleportDoor.h">
       <Filter>Header Files\Turnable</Filter>
     </ClInclude>
+    <ClInclude Include="GroundShader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tablet\CameraApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tablet\MainApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tablet\MapApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tablet\OcclusionQuery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tablet\Tablet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tablet\TabletGraphics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="tablet\VisibilityTester.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -85,6 +109,27 @@
     </ClCompile>
     <ClCompile Include="TeleportDoor.cpp">
       <Filter>Source Files\Turnable</Filter>
+    </ClCompile>
+    <ClCompile Include="tablet\CameraApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tablet\MainApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tablet\MapApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tablet\OcclusionQuery.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tablet\Tablet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tablet\TabletGraphics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tablet\VisibilityTester.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
