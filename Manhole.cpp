@@ -35,7 +35,7 @@ void Manhole::Close()
 	object->rotation.x += step;
 	object->rotation.w = cos(object->rotation.x);
 
-	object->position.y = sin(-object->rotation.x);
+	object->position.y = sin(-object->rotation.x) + object->originPosition.y;
 
 	if (object->rotation.x >= 0.0) {
 		isOpen = false;
