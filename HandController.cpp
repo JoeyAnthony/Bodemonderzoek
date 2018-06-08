@@ -87,10 +87,8 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 			target.z -= headPosition.z;
 
 			engine.scene.cameraNode->transform->position = glm::vec3(target.x, 0, target.z);
-			glm::vec3 position(data * glm::vec4(0, 0, 0, 1) + engine.scene.cameraNode->transform->globalTransform * glm::vec4(0, 0, 0, 1));
 		}
 		teleportTarget->getComponent<vrlib::tien::components::Renderable>()->visible = false;
-		node->transform->transform = startPosition;
 	}
 
 	if (teleportButton == vrlib::DigitalState::ON) 
@@ -124,6 +122,7 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 		}
 	}
 }
+
 
 bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables) {
 	vrlib::DigitalState button = controller.gripButton.getData();
