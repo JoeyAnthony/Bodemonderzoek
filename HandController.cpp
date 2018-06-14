@@ -75,7 +75,7 @@ void HandController::RayRenderer::frameSetup(const glm::mat4 & projectionMatrix,
 void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj)
 {
 	//Teleports to the location if the target is valid
-	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF && hasValidLocation)
+	if (actionButton == vrlib::DigitalState::TOGGLE_OFF && hasValidLocation)
 	{
 		glm::vec3 target = teleportTarget->transform->getGlobalPosition();
 		if (glm::abs(target.y) < 0.1)
@@ -90,7 +90,7 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 	}
 
 	//Casts a ray and draws a teleport target for the teleportable location
-	if (teleportButton == vrlib::DigitalState::ON) 
+	if (actionButton == vrlib::DigitalState::ON) 
 	{
 		closestHitPosition = drawRay(view, proj);
 		glm::mat4 wandMat = controller.transform.getData();
@@ -126,7 +126,7 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 Checks if the teleport button has been pressed, and if the ray intersects with a interactable object.
 */
 bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables) {
-	teleportButton = controller.touchButton.getData();
+	actionButton = controller.touchButton.getData();
 
 	//If a interactable object is selected, the code will run its leading method
 	if (actionTarget && objectIsBusy) 
@@ -151,7 +151,7 @@ bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::m
 	}
 
 	//Checks for selectable interactable objects
-	if (teleportButton == vrlib::DigitalState::ON && !actionTarget) {
+	if (actionButton == vrlib::DigitalState::ON && !actionTarget) {
 		glm::mat4 wandMat = controller.transform.getData();
 		vrlib::math::Ray pointer;
 		pointer.mOrigin = glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 0, 1));
@@ -176,7 +176,7 @@ bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::m
 	}
 
 	//If a interactable object is selected, this code goes off
-	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF) {
+	if (actionButton == vrlib::DigitalState::TOGGLE_OFF) {
 		if (actionTarget && !objectIsBusy) {
 			actionTarget->isDone = false;
 			objectIsBusy = true;

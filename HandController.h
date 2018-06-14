@@ -35,7 +35,7 @@ public:
 	HandController(vrlib::Vive::Controller c);
 	~HandController();
 
-	vrlib::DigitalState teleportButton;
+	vrlib::DigitalState actionButton;
 	vrlib::tien::Node* teleportTarget = nullptr;
 	Interactable* actionTarget = nullptr;
 	glm::vec3 teleportTargetPosition;
