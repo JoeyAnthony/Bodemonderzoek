@@ -74,8 +74,6 @@ void HandController::RayRenderer::frameSetup(const glm::mat4 & projectionMatrix,
 
 void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj)
 {
-	teleportButton = controller.touchButton.getData();
-
 	//Teleports to the location if the target is valid
 	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF && hasValidLocation)
 	{
@@ -128,7 +126,7 @@ void HandController::checkTeleport(glm::mat4 data, Tien& engine, glm::mat4 view,
 Checks if the teleport button has been pressed, and if the ray intersects with a interactable object.
 */
 bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::mat4 view, glm::mat4 proj, std::vector<Interactable*> interactables) {
-	vrlib::DigitalState button = controller.gripButton.getData();
+	teleportButton = controller.touchButton.getData();
 
 	//If a interactable object is selected, the code will run its leading method
 	if (actionTarget && objectIsBusy) 
@@ -153,7 +151,7 @@ bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::m
 	}
 
 	//Checks for selectable interactable objects
-	if (button == vrlib::DigitalState::ON && !actionTarget) {
+	if (teleportButton == vrlib::DigitalState::ON && !actionTarget) {
 		glm::mat4 wandMat = controller.transform.getData();
 		vrlib::math::Ray pointer;
 		pointer.mOrigin = glm::vec3(engine.scene.cameraNode->transform->globalTransform * wandMat * glm::vec4(0, 0, 0, 1));
@@ -178,7 +176,7 @@ bool HandController::checkInteractableItems(glm::mat4 data, Tien& engine, glm::m
 	}
 
 	//If a interactable object is selected, this code goes off
-	if (button == vrlib::DigitalState::TOGGLE_OFF) {
+	if (teleportButton == vrlib::DigitalState::TOGGLE_OFF) {
 		if (actionTarget && !objectIsBusy) {
 			actionTarget->isDone = false;
 			objectIsBusy = true;
