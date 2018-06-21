@@ -12,6 +12,7 @@
 #include "Manhole.h"
 #include "TeleportDoor.h"
 #include "VrLib/tien/Terrain.h"
+#include "PDFExport.h"
 
 using namespace vrlib::tien;
 class Bodemonderzoek : public vrlib::Application{
