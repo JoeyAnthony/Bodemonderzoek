@@ -29,3 +29,5 @@
 *.exe
 *.out
 *.app
+/.vs/Bodemonderzoek/v15
+/.vs
