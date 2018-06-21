@@ -85,7 +85,7 @@ void MapApp::initalize() {
 	background = new Square({}, {}, this);
 	background->color = background->hoverColor = { 0.9,0.9,0.9 };
 	background->setGeometry(getGeometry());
-	baseMap = new MapScroll("data/TabletTestProject/Images/WorldMap.png", 200, { 0,0 }, this);
+	baseMap = new MapScroll("data/BOdemonderzoek/textures/WorldMap.png", 200, { 0,0 }, this);
 	baseMap->setGeometry({ {50,50},getGeometry().size - ivec2(100,190) });
 	baseMap->setWorldPos({ 0,0 });
 	cursor = new Square({}, {}, this);
