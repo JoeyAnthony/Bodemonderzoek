@@ -21,7 +21,7 @@ void MainApp::initalize() {
 	buttons.push_back(new Button("Map App", [tablet = tablet, &mapApp = mapApp]() {tablet->setActiveApp(mapApp); }, this));
 	buttons.back()->setGeometry({ { 120, 1920 - 300 - 200 },{ 300,0 } });
 
-	buttons.push_back(new Button("Save PDF", [tablet = tablet, &camApp = camApp]() {camApp->exportPhotos(); }, this));
+	buttons.push_back(new Button("Save PDF", [tablet = tablet, &camApp = camApp]() {camApp->generateReport(); }, this));
 	buttons.back()->setGeometry({ { 120, 1920 - 300 - 300 },{ 300,0 } });
 }
 

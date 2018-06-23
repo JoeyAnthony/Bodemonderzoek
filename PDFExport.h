@@ -25,12 +25,12 @@ class PDFExport
 	std::atomic<bool> isFinished = true;
 
 	std::vector<Photo> photos;
-	std::vector<glm::vec3> route;
+	std::vector<glm::vec2> route;
 public:
 	PDFExport();
 
 	void addPhoto(const std::string &fileName, const glm::vec2 &photoPosition, float angle/*, ChemicalStorage* pd*/);
-	void addRouteNode(const glm::vec2 &position, bool jump);
+	void addRouteNode(const glm::vec2 &position);
 	void save(const std::string &fileName);
 
 	void generateReport(std::string file);

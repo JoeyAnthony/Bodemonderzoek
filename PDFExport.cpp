@@ -26,6 +26,7 @@ PDFExport::PDFExport()
 
 	font = HPDF_GetFont(pdf, "Helvetica", NULL);
 
+	frontPage();
 }
 
 void PDFExport::addPhoto(const std::string &fileName, const glm::vec2 &photoPosition, float angle/*, ChemicalStorage* pd*/)
@@ -90,9 +91,9 @@ void PDFExport::addPhoto(const std::string &fileName, const glm::vec2 &photoPosi
 	mutex.unlock();
 }
 
-void PDFExport::addRouteNode(const glm::vec2 &position, bool jump)
+void PDFExport::addRouteNode(const glm::vec2 &position)
 {
-	route.push_back(glm::vec3(position, jump ? 1 : 0));
+	route.push_back(position);
 }
 
 void PDFExport::save(const std::string & fileName)
@@ -110,10 +111,10 @@ void PDFExport::save(const std::string & fileName)
 void PDFExport::generateReport(std::string file)
 {
 	// Get filename from user
-	frontPage();
+	
 
 	// Add student Info
-	//generateRoutePage();
+	generateRoutePage();
 	// Add resultTable
 	//generateResultPage(cs);
 
@@ -219,8 +220,9 @@ void PDFExport::generateRoutePage()
 	HPDF_Page page;
 	page = HPDF_AddPage(pdf);
 
-	HPDF_Page_SetWidth(page, 595.276f);
-	HPDF_Page_SetHeight(page, 841.89f);
+	glm::vec2 pageSize = { 595.276f ,841.89f };
+	HPDF_Page_SetWidth(page, pageSize.x);
+	HPDF_Page_SetHeight(page, pageSize.y);
 
 	HPDF_Page_BeginText(page);
 	HPDF_Page_SetFontAndSize(page, font, 20);
@@ -228,122 +230,29 @@ void PDFExport::generateRoutePage()
 	HPDF_Page_ShowText(page, "Route");
 	HPDF_Page_EndText(page);
 
+
+	HPDF_Image image = HPDF_LoadJpegImageFromFile(pdf, "data/Bodemonderzoek/textures/WorldMap.jpg");
+	float aspect = HPDF_Image_GetHeight(image) / HPDF_Image_GetWidth(image);
+	float imageWidth = HPDF_Page_GetWidth(page) - 140;
+	float imageHeight = imageWidth * aspect;
+	glm::vec2 imagePosition = {70, 200};
+	HPDF_Page_DrawImage(page, image, imagePosition.x, imagePosition.y, (float)imageWidth, (float)imageHeight);
+
+	HPDF_Page_SetLineWidth(page, 5);
+	HPDF_Page_SetRGBStroke(page, 1.0, 0.0, 0.0);
+
+	float scale = pageSize.x / 255;
+
+	glm::vec2 currentpos = (pageSize / 2.0f);
+	for (auto& routeNode : route)
 	{
-		HPDF_Image map =// HPDF_LoadPngImageFromFile(pdf, ("data/ChemicalStorage/Photos/" + cs->startDateString + "/map.png").c_str());
-			HPDF_LoadJpegImageFromFile(pdf, "data/Bodemonderzoek/textures/WorldMap.jpg");
-		float mapwidth = HPDF_Image_GetWidth(map);
-		float mapheight = HPDF_Image_GetHeight(map);
-		float ratio = mapheight / mapwidth;
-		float iw = HPDF_Page_GetWidth(page) - 140;
-		float ih = iw * ratio;
-		float y = HPDF_Page_GetHeight(page) - 100;
-		HPDF_Page_DrawImage(page, map, 70.0f, y - ih, (float)iw, (float)ih);
-
-		bool first = true;
-		glm::vec3 last = route[0];
-		glm::vec2 pos;
-		HPDF_Page_SetRGBStroke(page, 1, 0, 0);
-		for (auto &r : route)
-		{
-			if (r.x == last.x && r.y == last.y && r.z == last.z)
-				continue;
-
-			if (r.z != last.z)
-			{
-
-				HPDF_Page_Stroke(page);
-				if (r.z == 1)
-				{
-					auto gstate = HPDF_CreateExtGState(pdf);
-					HPDF_ExtGState_SetAlphaFill(gstate, 0.5);
-					HPDF_ExtGState_SetAlphaStroke(gstate, 0.5);
-					HPDF_Page_SetExtGState(page, gstate);
-
-					HPDF_Page_SetRGBStroke(page, 1, 0.5, 0.5);
-				}
-				else
-				{
-					auto gstate = HPDF_CreateExtGState(pdf);
-					HPDF_ExtGState_SetAlphaFill(gstate, 1.0);
-					HPDF_ExtGState_SetAlphaStroke(gstate, 1.0);
-					HPDF_Page_SetExtGState(page, gstate);
-
-					HPDF_Page_SetRGBStroke(page, 1, 0, 0);
-				}
-				HPDF_Page_MoveTo(page, 70 + pos.x, y - pos.y);
-			}
-
-
-			pos.x = (r.x - mapwidth / 8 )  * iw;
-			pos.y = (r.y - mapheight / 8 )  * ih;
-			if (first)
-				HPDF_Page_MoveTo(page, 70 + pos.x, y - pos.y);
-			else
-				HPDF_Page_LineTo(page, 70 + pos.x, y - pos.y);
-			first = false;
-			last = r;
-		}
+		HPDF_Page_SetLineJoin(page, HPDF_MITER_JOIN);
+		HPDF_Page_MoveTo(page, currentpos.x, currentpos.y);
+		currentpos = glm::vec2(routeNode.y, routeNode.x)*scale + (pageSize / 2.0f);
+		HPDF_Page_LineTo(page, currentpos.x, currentpos.y);
 		HPDF_Page_Stroke(page);
 	}
 }
-
-//void PDFExport::generateResultPage(ChemicalStorage * cs)
-//{
-//	// Create a report page for every 5 objects
-//	for (int i = 0; i < cs->clickableObjects.size(); i = i + 5)
-//	{
-//		// Add a Result page
-//		HPDF_Page page;
-//		page = HPDF_AddPage(pdf);
-//		HPDF_Page_SetWidth(page, 595.276f);
-//		HPDF_Page_SetHeight(page, 841.89f);
-//		HPDF_Page_BeginText(page);
-//		HPDF_Page_SetFontAndSize(page, font, 20);
-//		HPDF_Page_MoveTextPos(page, 70, HPDF_Page_GetHeight(page) - 70);
-//		HPDF_Page_ShowText(page, "Results");
-//		HPDF_Page_MoveTextPos(page, 0, -20);
-//
-//		// Draw object report
-//		for (int j = i; j < cs->clickableObjects.size() && j < (i + 5); j++)
-//		{
-//
-//			// Add given object
-//			HPDF_Page_SetFontAndSize(page, font, 13);
-//			HPDF_Page_MoveTextPos(page, 0, -20);
-//			//HPDF_Page_ShowText(page, "");
-//			HPDF_Page_ShowText(page, cs->clickableObjects[j]->parent->name.c_str());
-//
-//			// Add given awnser
-//			HPDF_Page_SetFontAndSize(page, font, 13);
-//			HPDF_Page_MoveTextPos(page, 0, -20);
-//			HPDF_Page_ShowText(page, "Gegeven antwoord: ");
-//			HPDF_Page_ShowText(page, cs->clickableObjects[j]->getComponent<ChemicalObject>()->getAnwser().c_str());
-//
-//			// Add correct awnser
-//			HPDF_Page_SetFontAndSize(page, font, 13);
-//			HPDF_Page_MoveTextPos(page, 0, -20);
-//			HPDF_Page_ShowText(page, "Correct antwoord: ");
-//			HPDF_Page_ShowText(page, cs->clickableObjects[j]->getComponent<ChemicalObject>()->getError().c_str());
-//			HPDF_Page_MoveTextPos(page, 0, -80);
-//
-//			// Add image
-//
-//		}
-//
-//		HPDF_Page_EndText(page);
-//
-//		for (int j = i; j < cs->clickableObjects.size() && j < (i + 5); j++)
-//		{
-//			//node->getComponent<ChemicalObject>()->setPicLocation
-//			//cs->clickableObjects[j]->getComponent<ChemicalObject>()->getPicLocation(); 
-//			AddImage(page, cs->clickableObjects[j]->getComponent<ChemicalObject>()->getPicLocation(), 100, 100, HPDF_Page_GetWidth(page) - 150, HPDF_Page_GetHeight(page) - ((j - i) * 140) - 170);
-//			//HPDF_Page_GetWidth(page) - 20 - iw, HPDF_Page_GetHeight(page)
-//		}
-//
-//	}
-//
-//
-//}
 
 void PDFExport::AddImage(HPDF_Page page, std::string path, int hight, int with, int locx, int locy) {
 
