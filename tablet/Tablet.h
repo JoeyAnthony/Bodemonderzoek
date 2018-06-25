@@ -12,7 +12,7 @@
 #include <VrLib\tien\Tien.h>
 #include <initializer_list>
 
-class Tablet :  public vrlib::tien::components::MeshRenderer::Mesh, public vrlib::tien::components::Renderable {
+class Tablet : public vrlib::tien::components::MeshRenderer::Mesh, public vrlib::tien::components::Renderable {
 
 	// Our custom render context that allows us to render the tablet with custom shaders
 	class ShadelessForwardRenderContext : public vrlib::tien::components::Renderable::RenderContext, public vrlib::Singleton<ShadelessForwardRenderContext>
@@ -38,9 +38,9 @@ class Tablet :  public vrlib::tien::components::MeshRenderer::Mesh, public vrlib
 	vrlib::gl::VAO* vao;
 
 public: // This class is public to allow easy acces from TabletGraphics
-	// We use this class to convert our FBO to a texture for the mesh
-	// @NOTE: this class originated in NetworkEngine/PanelComponent.h/PanelComponent
-	// @TODO: maybe put this class in TIEN?
+		// We use this class to convert our FBO to a texture for the mesh
+		// @NOTE: this class originated in NetworkEngine/PanelComponent.h/PanelComponent
+		// @TODO: maybe put this class in TIEN?
 	class FboToTexture : public vrlib::Texture
 	{
 	public:
@@ -63,7 +63,7 @@ public:
 	const float m_withToHeightRatio;
 
 private:
-	
+
 	// FBO related variables
 	vrlib::gl::FBO m_fbo;
 	FboToTexture m_fboTexture;
@@ -74,6 +74,7 @@ private:
 	glm::mat4 m_activeTransfrom;
 
 	// The input devices
+	const vrlib::PositionalDevice& m_tabletHolder;
 	const vrlib::PositionalDevice& m_pointer;
 	const vrlib::DigitalDevice& m_trigger;
 
@@ -92,14 +93,14 @@ private:
 	void updateApps(float deltaMs);
 	void drawGraphicsObject(TabletGraphicsObject* obj, glm::mat4 transform);
 	void updateScreen();
-	void clear(glm::vec4 clearColor = {0,0,0,1});
+	void clear(glm::vec4 clearColor = { 0,0,0,1 });
 
 	// The apps that run on the tablet
 	std::vector<TabletApp*> apps;
 	TabletApp* activeApp;
 public:
 
-	Tablet(glm::ivec2 resolution, float size, const vrlib::PositionalDevice& pointer, const vrlib::DigitalDevice& trigger, std::initializer_list<TabletApp*> apps);
+	Tablet(glm::ivec2 resolution, float size, const vrlib::PositionalDevice& tabletHolder, const vrlib::PositionalDevice& pointer, const vrlib::DigitalDevice& trigger, std::initializer_list<TabletApp*> apps);
 
 	void update(float elapsedTime, vrlib::tien::Scene& scene) override;
 	void postUpdate(vrlib::tien::Scene& scene) override;
