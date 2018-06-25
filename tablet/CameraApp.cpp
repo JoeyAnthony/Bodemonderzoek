@@ -36,6 +36,14 @@ void CameraApp::initalize()
 	perspective = glm::perspective(glm::radians(fov), (float)fboRes.y / fboRes.x, 0.01f, 1000.0f);
 	model = translate(glm::mat4(), camTabletOffset);
 	addRouteNode();
+	
+	//debug
+	//addRouteNode({ 10, 0 });
+	//addRouteNode({ -20, 0 });
+	//addRouteNode({ -20, 20 });
+
+	//generateReport();
+	
 }
 
 void CameraApp::update(float deltaMS)
@@ -74,7 +82,12 @@ void CameraApp::updateInactive(float deltaMS) {
 
 void CameraApp::addRouteNode()
 {
-	pdfexport.addRouteNode({ tabletHand->transform->position.x, tabletHand->transform->position.z }, false);
+	pdfexport.addRouteNode({ tabletHand->transform->position.x, tabletHand->transform->position.z });
+}
+
+void CameraApp::addRouteNode(glm::vec2 pos)
+{
+	pdfexport.addRouteNode(pos);
 }
 
 void CameraApp::setFeedback(std::string s) {
@@ -173,7 +186,7 @@ bool CameraApp::linkToApps() {
 	return true;
 }
 
-void CameraApp::exportPhotos()
+void CameraApp::generateReport()
 {
 	pdfexport.generateReport("Report");
 }

@@ -142,7 +142,7 @@ namespace TabletGraphicsComonents {
 		TabletGraphicsObject(parent), onTriggered(func)
 	{
 		background = new Square(backgroundColor, backgroundHoverColor, this);
-		buttonText = new Text(textColor, textHoverColor, text, "Arial", 60, this);
+		buttonText = new Text(textColor, textHoverColor, text, "Arial", 100, this);
 		settings[Clickable] = true;
 	}
 

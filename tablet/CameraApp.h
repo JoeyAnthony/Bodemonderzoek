@@ -56,6 +56,7 @@ private:
 	PDFExport pdfexport;
 
 	void addRouteNode();
+	void addRouteNode(glm::vec2 pos);
 	void setFeedback(std::string s);
 	bool hasUpdated = false;
 public:
@@ -75,8 +76,8 @@ public:
 	const std::vector<PollutedObjData> pollutedObjsList();
 
 	void savePhoto();
+	void generateReport();
 	bool linkToApps();
-	void exportPhotos();
 
 	CameraApp(vrlib::tien::Node* hand);
 	CameraApp(vrlib::tien::Node * hand, std::function<void( const vrlib::tien::Scene&, const glm::mat4&, const glm::mat4&, vrlib::tien::Node*, int)> func);

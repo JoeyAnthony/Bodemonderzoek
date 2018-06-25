@@ -29,8 +29,12 @@ void Tablet::updateInput() {
 	m_screenPosInBounds = false;
 	if (node == nullptr) return;
 
-	// We take the inverse of our transfrom to convert the 'pointer' position to tablet space
-	const mat4 toTabletSpaceMat = inverse(node->transform->transform);
+	// We deteleport the transform with the location of the constroller and then invert it so we can convert world space coordinates to tablet space
+	const mat4 toTabletSpaceMat = [&] {
+		mat4 transform = node->transform->transform;
+		transform[3] = m_tabletHolder.getData() * vec4(0, 0, 0, 1);
+		return inverse(transform);
+	}();
 
 	// We get the position and front of the 'pointer' and convert them to tablet space
 	const vec3 pointerPos = vec3(toTabletSpaceMat * (m_pointer.getData() * vec4(0, 0, 0, 1)));
@@ -198,30 +202,30 @@ void Tablet::clear(vec4 clearColor) {
 	glViewport(viewport[0], viewport[1], viewport[2], viewport[3]);
 }
 
-Tablet::Tablet(ivec2 resolution, float size, const PositionalDevice& pointer, const DigitalDevice& trigger, initializer_list<TabletApp*> apps) :
+Tablet::Tablet(ivec2 resolution, float size, const PositionalDevice& tabletHolder, const PositionalDevice& pointer, const DigitalDevice& trigger, initializer_list<TabletApp*> apps) :
 	m_resolution(resolution), m_size(size), m_withToHeightRatio(((float)m_resolution.y) / m_resolution.x),
-	m_pointer(pointer), m_trigger(trigger), m_fbo(m_resolution.x, m_resolution.y), m_fboTexture(&m_fbo), 
-	
+	m_tabletHolder(tabletHolder), m_pointer(pointer), m_trigger(trigger), m_fbo(m_resolution.x, m_resolution.y), m_fboTexture(&m_fbo),
+
 	// We construct a matrix to convert our plane coordinates to pixel coordinates
 	// Syntax: [a,b] is the inclusive range between a and b. '=>' is the transformation we want. 'f' is the function that does the conversion
 	// x | [ -0.5 * size, 0.5 * size] => [0, resolution.x] | f(x) = x * (resolution.x / size) + resolution.x/2
 	// Same for y, but there the ratio is also a factor
 	// y | [ -0.5 * size * ratio, 0.5 * size * ratio] => [0, resolution.y] | f(y) = y * ((resolution.y / size) / ratio) + resolution.y/2 
 	m_planePosToPixelCoordMat(m_resolution.x / m_size, 0, 0, 0,
-							  0, (m_resolution.y / m_withToHeightRatio) / m_size, 0, 0,
-							  0, 0, 0, 0,
-							  m_resolution.x / 2.f, m_resolution.y / 2.f, 0, 0),
+		0, (m_resolution.y / m_withToHeightRatio) / m_size, 0, 0,
+		0, 0, 0, 0,
+		m_resolution.x / 2.f, m_resolution.y / 2.f, 0, 0),
 
 	// We contruct a matrix to convert our pixel coordinates to the fbo's texture coordinates
 	// x | [0, resolution.x] => [-1, 1] | f(x) = x * (1/resolution.x) * 2 - 1
 	// y | [0, resolution.y] => [-1, 1] | f(y) = y * (1/resolution.y) * 2 - 1
-	m_pixelToTexCoordMat( (1.f / m_resolution.x) * 2,0,0,0,
-						  0,(1.f / m_resolution.y) * 2,0,0,
-						  0,0,1,0,
-						  -1,-1,0,1 ),
+	m_pixelToTexCoordMat((1.f / m_resolution.x) * 2, 0, 0, 0,
+		0, (1.f / m_resolution.y) * 2, 0, 0,
+		0, 0, 1, 0,
+		-1, -1, 0, 1),
 	apps(apps)
-	{
-	
+{
+
 	// We setup the fbo as the mesh's texture
 	material.texture = &m_fboTexture;
 	material.normalmap = nullptr;
