@@ -78,6 +78,9 @@
     <ClInclude Include="tablet\VisibilityTester.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PDFExport.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -129,6 +132,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tablet\VisibilityTester.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PDFExport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "CameraApp.h"
 #include "glm/glm.hpp"
-#include "glm/gtc/matrix_transform.hpp"
+#include <glm/gtc/matrix_transform.hpp>
 #include <string>
 
 #include "MainApp.h"
@@ -35,6 +35,7 @@ void CameraApp::initalize()
 	//set mat
 	perspective = glm::perspective(glm::radians(fov), (float)fboRes.y / fboRes.x, 0.01f, 1000.0f);
 	model = translate(glm::mat4(), camTabletOffset);
+	addRouteNode();
 }
 
 void CameraApp::update(float deltaMS)
@@ -62,8 +63,6 @@ void CameraApp::update(float deltaMS)
 	if (feedbackTimer < 0 && (feedback->settings[Visable] || feedbackBG->settings[Visable])) {
 		feedback->settings[Visable] = feedbackBG->settings[Visable] = false;
 	}
-
-
 }
 
 void CameraApp::updateInactive(float deltaMS) {
@@ -71,6 +70,11 @@ void CameraApp::updateInactive(float deltaMS) {
 		hasUpdated = true;
 		mainApp->updatePhotoProgres(pollutedObjectsFound.size(), occlusionObjects.size());
 	}
+}
+
+void CameraApp::addRouteNode()
+{
+	pdfexport.addRouteNode({ tabletHand->transform->position.x, tabletHand->transform->position.z }, false);
 }
 
 void CameraApp::setFeedback(std::string s) {
@@ -158,11 +162,20 @@ void CameraApp::savePhoto()
 	mainApp->updatePhotoProgres(pollutedObjectsFound.size(), occlusionObjects.size());
 	std::string path = "data/Bodemonderzoek/photos/"s + std::to_string(imagecount++) + ".jpg";
 	fbo->saveAsFile(path);
+
+	pdfexport.addPhoto(path, { 595.276f / 2, 841.89f / 2 }, 0);
+	addRouteNode();
+	
 }
 
 bool CameraApp::linkToApps() {
 	if ((mainApp = tablet->getApp<MainApp>()) == nullptr) return false;
 	return true;
+}
+
+void CameraApp::exportPhotos()
+{
+	pdfexport.generateReport("Report");
 }
 
 CameraApp::CameraApp(vrlib::tien::Node* hand) {

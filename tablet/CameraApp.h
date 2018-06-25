@@ -3,6 +3,7 @@
 #include "VisibilityTester.h"
 #include <set>
 #include <vector>
+#include "../PDFExport.h"
 
 class MainApp;
 
@@ -52,7 +53,9 @@ private:
 	std::vector<vrlib::tien::Node*> pollutedObjInScreen;
 	std::vector<PollutedObjData> pollutedObjectsFound;
 	MainApp* mainApp;
+	PDFExport pdfexport;
 
+	void addRouteNode();
 	void setFeedback(std::string s);
 	bool hasUpdated = false;
 public:
@@ -73,6 +76,7 @@ public:
 
 	void savePhoto();
 	bool linkToApps();
+	void exportPhotos();
 
 	CameraApp(vrlib::tien::Node* hand);
 	CameraApp(vrlib::tien::Node * hand, std::function<void( const vrlib::tien::Scene&, const glm::mat4&, const glm::mat4&, vrlib::tien::Node*, int)> func);

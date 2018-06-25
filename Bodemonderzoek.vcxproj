@@ -61,21 +61,29 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\Libraries\VrLib\VrLib.props" />
     <Import Project="..\..\Libraries\PhysX_3.4\PhysX.props" />
+    <Import Project="..\..\Libraries\zlib\zlib.props" />
+    <Import Project="..\..\Libraries\libharu\libharu.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\Libraries\VrLib\VrLib.props" />
     <Import Project="..\..\Libraries\PhysX_3.4\PhysX.props" />
+    <Import Project="..\..\Libraries\libharu\libharu.props" />
+    <Import Project="..\..\Libraries\zlib\zlib.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\Libraries\VrLib\VrLib.props" />
     <Import Project="..\..\Libraries\PhysX_3.4\PhysX.props" />
+    <Import Project="..\..\Libraries\libharu\libharu.props" />
+    <Import Project="..\..\Libraries\zlib\zlib.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
     <Import Project="..\..\Libraries\VrLib\VrLib.props" />
     <Import Project="..\..\Libraries\PhysX_3.4\PhysX.props" />
+    <Import Project="..\..\Libraries\libharu\libharu.props" />
+    <Import Project="..\..\Libraries\zlib\zlib.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -102,6 +110,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>zlib_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -162,6 +171,7 @@
     <ClInclude Include="MainShader.h" />
     <ClInclude Include="Manhole.h" />
     <ClInclude Include="NodeLoader.h" />
+    <ClInclude Include="PDFExport.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="tablet\CameraApp.h" />
     <ClInclude Include="tablet\MainApp.h" />
@@ -183,6 +193,7 @@
     <ClCompile Include="MainShader.cpp" />
     <ClCompile Include="Manhole.cpp" />
     <ClCompile Include="NodeLoader.cpp" />
+    <ClCompile Include="PDFExport.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
