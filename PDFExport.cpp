@@ -251,6 +251,7 @@ void PDFExport::generateRoutePage()
 		currentpos = glm::vec2(routeNode.y, routeNode.x)*scale + (pageSize / 2.0f);
 		HPDF_Page_LineTo(page, currentpos.x, currentpos.y);
 		HPDF_Page_Stroke(page);
+
 	}
 }
 
